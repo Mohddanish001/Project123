@@ -67,7 +67,7 @@ export default function Content() {
               We Create <span className="text-[#0e6938]">Amazing</span> Content!
             </h2>
             <p className="text-gray-600 mb-6">
-              Welcome to Writely, your go-to hub for creative content and
+              Welcome to Write, your go-to hub for creative content and
               digital marketing solutions. As content experts, we provide a full
               spectrum of services tailored to help your business excel in
               today’s fast-paced digital world. From crafting premium-quality
@@ -90,9 +90,9 @@ export default function Content() {
                 We Deliver On Time
               </li>
             </ul>
-            <button className="mt-6 px-6 py-2 bg-[#0e6938] text-white rounded-lg hover:bg-[#113b25]">
+            {/* <button className="mt-6 px-6 py-2 bg-[#0e6938] text-white rounded-lg hover:bg-[#113b25]">
               Connect With Us
-            </button>
+            </button> */}
           </motion.div>
         </div>
       </section>
@@ -178,7 +178,7 @@ const OurServices = () => {
               What <span className="text-[#0e6938]">We Do?</span>
             </h2>
             <p className="text-gray-600 mb-4 text-sm">
-              As dynamic Content Creation Specialists, Writely specializes in
+              As dynamic Content Creation Specialists, Write specializes in
               delivering engaging and impactful content solutions.
             </p>
             <img
@@ -202,7 +202,7 @@ const OurServices = () => {
             </ul>
             {/* <div className="mt-4">
               <p className="text-[#0e6938] font-bold">160+ PROJECTS DONE</p>
-              <p className="text-black font-bold">Writely</p>
+              <p className="text-black font-bold">Write</p>
               <p className="text-sm text-gray-500">Do it Rightly</p>
             </div> */}
           </div>
@@ -235,7 +235,7 @@ const OurServices = () => {
               />
               <h3 className="font-bold text-xl">Quick Delivery Time</h3>
               <p className="text-gray-600">
-                At Writely, we prioritize on-time delivery with streamlined
+                At Write, we prioritize on-time delivery with streamlined
                 processes that ensure smooth and efficient project completion,
                 every time.
               </p>
@@ -249,7 +249,7 @@ const OurServices = () => {
               />
               <h3 className="font-bold text-xl">Original Content</h3>
               <p className="text-gray-600">
-                At Writely, we take pride in crafting 100% original,
+                At Write, we take pride in crafting 100% original,
                 plagiarism-free content that's perfectly aligned with your
                 brand’s voice, ensuring it truly connects with your audience and
                 reflects your unique identity.
@@ -282,7 +282,7 @@ const OurServices = () => {
           </h1>
           <p className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg">
             Introducing the ultimate marketing game-changer: Content that walks,
-            talks, and sells for you. With Writely, we blend the art of
+            talks, and sells for you. With Write, we blend the art of
             storytelling, persuasive language, and stunning visuals to craft
             irresistible content that captures attention, keeps audiences
             hooked, and drives conversions. Let us turn your message into an
@@ -291,13 +291,13 @@ const OurServices = () => {
           <p className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg">
             Watch your business soar to new heights!
           </p>
-          <a
+          {/* <a
             href="#"
             className="inline-block mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-[#0e6938] text-white font-semibold text-sm sm:text-base rounded-lg shadow-md hover:bg-red-600 transition duration-300"
             data-aos="flip-right"
           >
             CLICK HERE TO KNOW MORE
-          </a>
+          </a> */}
         </div>
 
         {/* Right Section */}
@@ -445,7 +445,7 @@ const ContactInfo = () => {
             </div>
             <div>
               <p className="font-semibold">Email Address</p>
-              <p className="text-lg">Info@writely.in</p>
+              <p className="text-lg">Info@Write.in</p>
             </div>
           </div>
 
@@ -456,7 +456,7 @@ const ContactInfo = () => {
             <div>
               <p className="font-semibold">Our Address</p>
               <p className="text-lg">
-                Writely, Block-A, Sangam Vihar,
+                Write, Block-A, Sangam Vihar,
                 <br />
                 Dharampura Extension,
                 <br />
@@ -498,12 +498,12 @@ const WebUI = () => {
                 className="w-full text-left font-semibold py-2 focus:outline-none"
                 onClick={() => toggleAccordion(0)}
               >
-                What is Writely?
+                What is Write?
               </button>
               {openIndex === 0 && (
                 <div className="mt-2">
                   <p>
-                    Writely is a content management service that helps you
+                    Write is a content management service that helps you
                     create professional documents with ease.
                   </p>
                 </div>
@@ -520,7 +520,7 @@ const WebUI = () => {
               {openIndex === 1 && (
                 <div className="mt-2">
                   <p>
-                    You can reach us via email at info@writely.in or call
+                    You can reach us via email at info@Write.in or call
                     +91-9773754783.
                   </p>
                 </div>
@@ -537,7 +537,7 @@ const WebUI = () => {
               {openIndex === 2 && (
                 <div className="mt-2">
                   <p>
-                    We are located at Writely, Block-A, Sangam Vihar, Dharampura
+                    We are located at Write, Block-A, Sangam Vihar, Dharampura
                     Extension, Najafgarh, New Delhi, 110043.
                   </p>
                 </div>
