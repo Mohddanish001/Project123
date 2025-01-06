@@ -14,24 +14,38 @@ export const Header = () => {
           </div>
 
           {/* Menu Items (Desktop) */}
-          <ul className="hidden md:flex space-x-8 text-gray-700 ml-auto">
-            <li>
-              <Link
-                to="/"
-                className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
-              >
-                About Us
-              </Link>
-            </li>
-          </ul>
+          <div>
+            <ul className="hidden md:flex space-x-8 text-gray-700 ml-auto">
+              <li>
+                <Link
+                  to="/"
+                  className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* <div className="relative w-[150px] h-[70px] bg-red-500 rounded--full flex items-center justify-center">
+            <h1 className="text-white font-bold">Shyam</h1>
+          </div> */}
 
           {/* Mobile Menu Toggle */}
           <button
@@ -68,7 +82,7 @@ export const Header = () => {
                 <Link
                   to="/"
                   className="block cursor-pointer hover:text-orange-600 transition-colors"
-                  onClick={() => setIsOpen(false)} // Close menu on click
+                  onClick={() => setIsOpen(false)}
                 >
                   Home
                 </Link>
@@ -77,9 +91,18 @@ export const Header = () => {
                 <Link
                   to="/about"
                   className="block cursor-pointer hover:text-orange-600 transition-colors"
-                  onClick={() => setIsOpen(false)} // Close menu on click
+                  onClick={() => setIsOpen(false)}
                 >
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="block cursor-pointer hover:text-orange-600 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact
                 </Link>
               </li>
             </ul>

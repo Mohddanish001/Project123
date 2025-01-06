@@ -43,11 +43,11 @@ export const Footer = () => {
                 About Us
               </a>
             </li>
-            {/* <li>
-              <a href="#" className="hover:text-gray-400">
+            <li>
+              <a href="/contact" className="hover:text-gray-400">
                 Contact Us
               </a>
-            </li> */}
+            </li>
           </ul>
         </div>
 
@@ -93,7 +93,7 @@ export const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-        <p className="text-xs">Copyright by Write. All rights reserved.</p>
+        <p className="text-xs">Copyright by Writeout. All rights reserved.</p>
         <div className="space-x-4 mt-2">
           <a href="#" className="text-xs hover:text-gray-400">
             Privacy & Policy

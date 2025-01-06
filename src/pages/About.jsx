@@ -17,7 +17,7 @@ export const About = () => {
         <div className="flex flex-col md:flex-row gap-8 p-4">
           <div className="flex flex-col md:w-1/2 gap-8" data-aos="fade-down">
             <div>
-              <img src="process.png" alt="Illustration" className="rounded-md" />
+              <img src="about1.png" alt="Illustration" className="w-full" />
             </div>
             <div className="px-4 md:px-10">
               {/* Points */}
@@ -55,7 +55,7 @@ export const About = () => {
             </h2>
             {/* Add Text Content */}
             <p className="text-gray-700 mb-4">
-              Welcome to Write – where words come to life, and ideas take
+              Welcome to writeout – where words come to life, and ideas take
               flight! We're not just a content provider; we're your creative
               partner in building captivating, impactful, and memorable
               narratives. Whether it's blog posts, articles, social media
@@ -64,7 +64,7 @@ export const About = () => {
               lasting impression.
             </p>
             <p className="text-gray-700 mb-4">
-              At Write, we know that behind every great business is a great
+              At writeout, we know that behind every great business is a great
               story – and we’re here to help you tell yours. We bring passion,
               precision, and personality to every piece of content, ensuring
               that your voice stands out in today’s noisy digital world. From
@@ -80,7 +80,7 @@ export const About = () => {
             </p>
             <p className="text-gray-700 mb-4">
               We’re not just about writing; we’re about writing right to help
-              your business grow, connect, and thrive. Join the Write family
+              your business grow, connect, and thrive. Join the writeout family
               today and let us bring your content vision to life. Whether you're
               a startup or an established brand, we've got the perfect words
               waiting for you! Let’s create something extraordinary, together.

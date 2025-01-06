@@ -49,7 +49,7 @@ export default function Content() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <img
-              src="writeout 222222 image.png"
+              src="/first1.png"
               alt="About Us Illustration"
               className="w-full rounded-lg h-auto"
             />
@@ -67,7 +67,7 @@ export default function Content() {
               We Create <span className="text-[#0e6938]">Amazing</span> Content!
             </h2>
             <p className="text-gray-600 mb-6">
-              Welcome to Write, your go-to hub for creative content and digital
+              Welcome to writeout, your go-to hub for creative content and digital
               marketing solutions. As content experts, we provide a full
               spectrum of services tailored to help your business excel in
               today’s fast-paced digital world. From crafting premium-quality
@@ -178,11 +178,11 @@ const OurServices = () => {
               What <span className="text-[#0e6938]">We Do?</span>
             </h2>
             <p className="text-gray-600 mb-4 text-sm">
-              As dynamic Content Creation Specialists, Write specializes in
+              As dynamic Content Creation Specialists, writeout specializes in
               delivering engaging and impactful content solutions.
             </p>
             <img
-              src="writeout2image.png"
+              src="four.png"
               alt="Illustration"
               className="w-full rounded-md mb-4"
             />
@@ -197,12 +197,12 @@ const OurServices = () => {
               </li>
               <li className="flex items-center font-bold gap-2">
                 <span className="text-[#0e6938] font-bold">•</span> Find Our
-                Services! Click Here
+                Services
               </li>
             </ul>
             {/* <div className="mt-4">
               <p className="text-[#0e6938] font-bold">160+ PROJECTS DONE</p>
-              <p className="text-black font-bold">Write</p>
+              <p className="text-black font-bold">writeout</p>
               <p className="text-sm text-gray-500">Do it Rightly</p>
             </div> */}
           </div>
@@ -235,7 +235,7 @@ const OurServices = () => {
               />
               <h3 className="font-bold text-xl">Quick Delivery Time</h3>
               <p className="text-gray-600">
-                At Write, we prioritize on-time delivery with streamlined
+                At writeout, we prioritize on-time delivery with streamlined
                 processes that ensure smooth and efficient project completion,
                 every time.
               </p>
@@ -249,7 +249,7 @@ const OurServices = () => {
               />
               <h3 className="font-bold text-xl">Original Content</h3>
               <p className="text-gray-600">
-                At Write, we take pride in crafting 100% original,
+                At writeout, we take pride in crafting 100% original,
                 plagiarism-free content that's perfectly aligned with your
                 brand’s voice, ensuring it truly connects with your audience and
                 reflects your unique identity.
@@ -282,7 +282,7 @@ const OurServices = () => {
           </h1>
           <p className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg">
             Introducing the ultimate marketing game-changer: Content that walks,
-            talks, and sells for you. With Write, we blend the art of
+            talks, and sells for you. With writeout, we blend the art of
             storytelling, persuasive language, and stunning visuals to craft
             irresistible content that captures attention, keeps audiences
             hooked, and drives conversions. Let us turn your message into an
@@ -306,7 +306,7 @@ const OurServices = () => {
           data-aos="flip-right"
         >
           <img
-            src="WRITEOUT 3333 IMAGE.png"
+            src="second.png"
             alt="Illustration of content and marketing"
             className="max-w-full h-auto"
           />
@@ -345,7 +345,6 @@ const OurServices = () => {
         {/* <button className="mt-6 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
           Find More Services! Click Here
         </button> */}
-       
       </div>
     </section>
   );
@@ -424,126 +423,11 @@ const ContactInfo = () => {
         </div>
       </div>
 
-      {/* contact  */}
+     
 
-      <div className="bg-[#0e6938] text-white min-h-screen flex flex-col lg:flex-row items-center justify-center">
-        {/* Left Section */}
-        <div className="lg:w-1/2 px-8">
-          {/* <h1 className="text-4xl font-bold mb-4">Book A Demo</h1> */}
-          {/* <p className="text-lg mb-6">
-            See what Pepper can do for you in a short 20 mins call and discover
-            the new way of doing content marketing.
-          </p> */}
-          <img
-            src="https://via.placeholder.com/400x300"
-            alt="Illustration"
-            className="rounded-lg shadow-md"
-          />
-        </div>
+      
 
-        {/* Right Section */}
-        <div className="lg:w-1/2 bg-white text-black p-8 rounded-lg shadow-lg lg:ml-8 w-full max-w-lg">
-          <form className="space-y-4">
-            <div className="flex space-x-4">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="w-1/2 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="w-1/2 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="Company Name"
-              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
-            />
-            {/* <input
-              type="text"
-              placeholder="Number of Employees"
-              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
-            /> */}
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
-            />
-            <input
-              type="text"
-              placeholder="Country"
-              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
-            />
-            <div className="flex items-center space-x-4">
-              <span className="text-gray-500">+91</span>
-              <input
-                type="text"
-                placeholder="9990000000"
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-[#0e6938] text-white font-bold py-2 rounded hover:bg-[#143825] focus:outline-none"
-            >
-              Submit
-            </button>
-            {/* <p className="text-center text-sm mt-4">
-              By signing up you agree to our{" "}
-              <a href="#" className="text-blue-500 underline">
-                Terms of Service
-              </a>{" "}
-              and{" "}
-              <a href="#" className="text-blue-500 underline">
-                Privacy Policy
-              </a>
-              .
-            </p> */}
-          </form>
-        </div>
-      </div>
-
-      {/* <div className="bg-[#8a2be2] text-white py-8">
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex items-center space-x-4">
-            <div className="text-4xl">
-              <i className="fas fa-phone"></i>{" "}
-            </div>
-            <div>
-              <p className="font-semibold">Phone number</p>
-              <p className="text-lg">+91-9773754783</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <div className="text-4xl">
-              <i className="fas fa-envelope"></i>
-            </div>
-            <div>
-              <p className="font-semibold">Email Address</p>
-              <p className="text-lg">Info@Write.in</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <div className="text-4xl">
-              <i className="fas fa-map-marker-alt"></i>{" "}
-            </div>
-            <div>
-              <p className="font-semibold">Our Address</p>
-              <p className="text-lg">
-                Write, Block-A, Sangam Vihar,
-                <br />
-                Dharampura Extension,
-                <br />
-                Najafgarh, New Delhi, 110043
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      
     </div>
   );
 };
@@ -560,7 +444,7 @@ const WebUI = () => {
       <div className="max-w-6xl mx-auto  grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex justify-center items-center">
           <img
-            src="WRITEOUT FAQ IMAGES.png"
+            src="third.png"
             alt="Earth"
             className="w-full  object-contain"
           />
@@ -576,12 +460,12 @@ const WebUI = () => {
                 className="w-full text-left font-semibold py-2 focus:outline-none"
                 onClick={() => toggleAccordion(0)}
               >
-                What is Write?
+                What is writeout?
               </button>
               {openIndex === 0 && (
                 <div className="mt-2">
                   <p>
-                    Write is a content management service that helps you create
+                    writeout is a content management service that helps you create
                     professional documents with ease.
                   </p>
                 </div>
@@ -598,7 +482,7 @@ const WebUI = () => {
               {openIndex === 1 && (
                 <div className="mt-2">
                   <p>
-                    You can reach us via email at info@Write.in or call
+                    You can reach us via email at info@writeout.in or call
                     +91-9773754783.
                   </p>
                 </div>
@@ -615,7 +499,7 @@ const WebUI = () => {
               {openIndex === 2 && (
                 <div className="mt-2">
                   <p>
-                    We are located at Write, Block-A, Sangam Vihar, Dharampura
+                    We are located at writeout, Block-A, Sangam Vihar, Dharampura
                     Extension, Najafgarh, New Delhi, 110043.
                   </p>
                 </div>
