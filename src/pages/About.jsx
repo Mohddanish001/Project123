@@ -17,7 +17,7 @@ export const About = () => {
         <div className="flex flex-col md:flex-row gap-8 p-4">
           <div className="flex flex-col md:w-1/2 gap-8" data-aos="fade-down">
             <div>
-              <img src="w1.png" alt="Illustration" className="rounded-md" />
+              <img src="process.png" alt="Illustration" className="rounded-md" />
             </div>
             <div className="px-4 md:px-10">
               {/* Points */}

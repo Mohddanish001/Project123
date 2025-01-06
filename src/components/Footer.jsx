@@ -6,7 +6,9 @@ export const Footer = () => {
       <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Connect With Us */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-center">Connect With Us.</h3>
+          <h3 className="text-lg font-semibold mb-4 text-center">
+            Connect With Us.
+          </h3>
           <div className="flex space-x-4">
             <a href="#" className="hover:text-gray-400">
               <i className="fab fa-facebook-f"></i>
@@ -22,10 +24,12 @@ export const Footer = () => {
 
         {/* Useful Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-center">Useful Links</h3>
+          <h3 className="text-lg font-semibold mb-4 text-center">
+            Useful Links
+          </h3>
           <ul className="space-y-2 text-center">
             <li>
-              <a href="#" className="hover:text-gray-400 ">
+              <a href="/" className="hover:text-gray-400 ">
                 Home
               </a>
             </li>
@@ -35,15 +39,15 @@ export const Footer = () => {
               </a>
             </li> */}
             <li>
-              <a href="#" className="hover:text-gray-400">
+              <a href="/about" className="hover:text-gray-400">
                 About Us
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#" className="hover:text-gray-400">
                 Contact Us
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -89,7 +93,7 @@ export const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-        <p className="text-xs">Copyright by Writely. All rights reserved.</p>
+        <p className="text-xs">Copyright by Write. All rights reserved.</p>
         <div className="space-x-4 mt-2">
           <a href="#" className="text-xs hover:text-gray-400">
             Privacy & Policy

@@ -67,8 +67,8 @@ export default function Content() {
               We Create <span className="text-[#0e6938]">Amazing</span> Content!
             </h2>
             <p className="text-gray-600 mb-6">
-              Welcome to Write, your go-to hub for creative content and
-              digital marketing solutions. As content experts, we provide a full
+              Welcome to Write, your go-to hub for creative content and digital
+              marketing solutions. As content experts, we provide a full
               spectrum of services tailored to help your business excel in
               today’s fast-paced digital world. From crafting premium-quality
               content to ensuring every detail aligns with your vision, we’re
@@ -317,7 +317,6 @@ const OurServices = () => {
         <h2 className="text-3xl font-bold text-gray-800 mb-6">
           Our <span className="text-[#0e6938]">Services</span>
         </h2>
-
         <div className="overflow-hidden relative">
           <div
             className={`flex ${isPlaying ? "animate-marquee" : ""} space-x-6`}
@@ -326,25 +325,27 @@ const OurServices = () => {
             {services.concat(services).map((service, index) => (
               <div
                 key={index}
-                className="p-4 h-[40vh] bg-gray-100 rounded-lg shadow w-72 flex flex-col items-center shrink-0"
+                className="p-4  bg-gray-100 h-[65vh]  rounded-lg shadow w-72 flex flex-col items-center shrink-0"
               >
                 <img
                   src={service.image}
-                //   alt={service.title}
+                  //   alt={service.title}
                   className="w-16 h-16 mb-4"
                 />
                 <h3 className="text-lg text-[#0e6938] uppercase font-bold mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
+                <p className="text-gray-600 text-sm  text-justify ">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
-
         {/* <button className="mt-6 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
           Find More Services! Click Here
         </button> */}
+       
       </div>
     </section>
   );
@@ -418,12 +419,89 @@ const ContactInfo = () => {
         {/* Right Section */}
         <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
           <div className="relative">
-            <img
-              src="https://via.placeholder.com/400x400"
-              alt="Checklist Illustration"
-              className="w-72 md:w-96"
-            />
+            <img src="about.png" alt="Checklist Illustration" className="" />
           </div>
+        </div>
+      </div>
+
+      {/* contact  */}
+
+      <div className="bg-[#0e6938] text-white min-h-screen flex flex-col lg:flex-row items-center justify-center">
+        {/* Left Section */}
+        <div className="lg:w-1/2 px-8">
+          {/* <h1 className="text-4xl font-bold mb-4">Book A Demo</h1> */}
+          {/* <p className="text-lg mb-6">
+            See what Pepper can do for you in a short 20 mins call and discover
+            the new way of doing content marketing.
+          </p> */}
+          <img
+            src="https://via.placeholder.com/400x300"
+            alt="Illustration"
+            className="rounded-lg shadow-md"
+          />
+        </div>
+
+        {/* Right Section */}
+        <div className="lg:w-1/2 bg-white text-black p-8 rounded-lg shadow-lg lg:ml-8 w-full max-w-lg">
+          <form className="space-y-4">
+            <div className="flex space-x-4">
+              <input
+                type="text"
+                placeholder="First Name"
+                className="w-1/2 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                className="w-1/2 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="Company Name"
+              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
+            />
+            {/* <input
+              type="text"
+              placeholder="Number of Employees"
+              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
+            /> */}
+            <input
+              type="email"
+              placeholder="Email Address"
+              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
+            />
+            <input
+              type="text"
+              placeholder="Country"
+              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
+            />
+            <div className="flex items-center space-x-4">
+              <span className="text-gray-500">+91</span>
+              <input
+                type="text"
+                placeholder="9990000000"
+                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0e6938]"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-[#0e6938] text-white font-bold py-2 rounded hover:bg-[#143825] focus:outline-none"
+            >
+              Submit
+            </button>
+            {/* <p className="text-center text-sm mt-4">
+              By signing up you agree to our{" "}
+              <a href="#" className="text-blue-500 underline">
+                Terms of Service
+              </a>{" "}
+              and{" "}
+              <a href="#" className="text-blue-500 underline">
+                Privacy Policy
+              </a>
+              .
+            </p> */}
+          </form>
         </div>
       </div>
 
@@ -503,8 +581,8 @@ const WebUI = () => {
               {openIndex === 0 && (
                 <div className="mt-2">
                   <p>
-                    Write is a content management service that helps you
-                    create professional documents with ease.
+                    Write is a content management service that helps you create
+                    professional documents with ease.
                   </p>
                 </div>
               )}
