@@ -39,6 +39,9 @@ export default function Content() {
   return (
     <>
       <section className="bg-white">
+        {/* <div>
+          <img src="writeout banner.png" alt="" className="w-full" />
+        </div> */}
         <div className="container mx-auto  md:flex md:items-center md:space-x-12">
           {/* Left Image Section */}
           <motion.div

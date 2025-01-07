@@ -90,7 +90,7 @@ export const Contact = () => {
               <p className="mb-2">
                 <span className="font-bold">Phone:</span> +91 0909090449
               </p>
-              <p>
+              {/* <p>
                 <span className="font-bold">Email:</span>{" "}
                 <a
                   href="mailto:fourbrick@gmail.com"
@@ -98,7 +98,7 @@ export const Contact = () => {
                 >
                   fourbrick@gmail.com
                 </a>
-              </p>
+              </p> */}
             </div>
             <div className="mt-4">
               <iframe
