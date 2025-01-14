@@ -9,9 +9,14 @@ export const Header = () => {
       <div className="px-4 md:px-8">
         <div className="flex justify-between items-center p-1">
           {/* Logo */}
+        
           <div>
+               <Link
+           to="/">
             <img src="logo34.png" alt="Logo" className="w-[130px] h-[70px]" />
+             </Link>
           </div>
+         
 
           {/* Menu Items (Desktop) */}
           <div>
@@ -22,6 +27,14 @@ export const Header = () => {
                   className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
                 >
                   Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blogs"
+                  className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
+                >
+                  Blogs
                 </Link>
               </li>
               <li>
@@ -89,6 +102,15 @@ export const Header = () => {
               </li>
               <li>
                 <Link
+                  to="/blogs"
+                  className="block cursor-pointer hover:text-orange-600 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/about"
                   className="block cursor-pointer hover:text-orange-600 transition-colors"
                   onClick={() => setIsOpen(false)}
@@ -96,6 +118,7 @@ export const Header = () => {
                   About Us
                 </Link>
               </li>
+       
               <li>
                 <Link
                   to="/contact"

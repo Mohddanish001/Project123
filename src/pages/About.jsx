@@ -55,7 +55,7 @@ export const About = () => {
             </h2>
             {/* Add Text Content */}
             <p className="text-gray-700 mb-4">
-              Welcome to writeout – where words come to life, and ideas take
+              Welcome to Writeout – where words come to life, and ideas take
               flight! We're not just a content provider; we're your creative
               partner in building captivating, impactful, and memorable
               narratives. Whether it's blog posts, articles, social media
@@ -64,7 +64,7 @@ export const About = () => {
               lasting impression.
             </p>
             <p className="text-gray-700 mb-4">
-              At writeout, we know that behind every great business is a great
+              At Writeout, we know that behind every great business is a great
               story – and we’re here to help you tell yours. We bring passion,
               precision, and personality to every piece of content, ensuring
               that your voice stands out in today’s noisy digital world. From
@@ -76,7 +76,12 @@ export const About = () => {
               What sets us apart? It’s our unwavering commitment to quality,
               creativity, and collaboration. We take the time to understand your
               goals, audience, and brand tone, so we can deliver content that
-              truly reflects who you are.
+              truly reflects who you are. We’re not just about writing; we’re
+              about writing right to help your business grow, connect, and
+              thrive. Join the Writeout family today and let us bring your
+              content vision to life. Whether you're a startup or an established
+              brand, we've got the perfect words waiting for you! Let’s create
+              something extraordinary together.
             </p>
             <p className="text-gray-700 mb-4">
               We’re not just about writing; we’re about writing right to help
@@ -89,7 +94,7 @@ export const About = () => {
         </div>
 
         {/* Steps Section */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
+        <div className="mt-16 px-10 grid md:grid-cols-3 gap-8">
           {["Get Started", "Requirement", "Final Approval"].map(
             (title, index) => (
               <div

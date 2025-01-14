@@ -4,6 +4,7 @@ import React from "react";
 import { Home } from "../pages/Home";
 import { Contact } from "../pages/Contact";
 import { About } from "../pages/About";
+import BlogSection from "../pages/BlogSection";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/blogs",
+        element: <BlogSection />,
       },
     ],
   },
