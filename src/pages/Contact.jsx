@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Contact = () => {
-  const backgroundImage = "contactus.png";
+  const backgroundImage = "contact.webp";
   return (
     <div className="mt-20">
       <div
