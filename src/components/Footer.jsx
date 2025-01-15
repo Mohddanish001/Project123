@@ -6,10 +6,10 @@ export const Footer = () => {
       <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Connect With Us */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-center">
+          <h3 className="text-lg font-semibold mb-4 text-center md:text-left">
             Connect With Us.
           </h3>
-          <div className="flex space-x-4">
+          <div className="flex justify-center md:justify-start space-x-4">
             <a href="#" className="hover:text-gray-400">
               <i className="fab fa-facebook-f"></i>
             </a>
@@ -24,23 +24,18 @@ export const Footer = () => {
 
         {/* Useful Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-center">
+          <h3 className="text-lg  font-semibold mb-4 text-center md:text-left ">
             Useful Links
           </h3>
-          <ul className="space-y-2 text-center">
+          <ul className="space-y-2 text-center md:text-left ">
             <li>
-              <a href="/" className="hover:text-gray-400 ">
+              <a href="/" className="hover:text-gray-400">
                 Home
               </a>
             </li>
-            {/* <li>
-              <a href="#" className="hover:text-gray-400">
-                Services
-              </a>
-            </li> */}
             <li>
               <a href="/blogs" className="hover:text-gray-400">
-                Blogs 
+                Blogs
               </a>
             </li>
             <li>
@@ -48,7 +43,6 @@ export const Footer = () => {
                 About Us
               </a>
             </li>
-            
             <li>
               <a href="/contact" className="hover:text-gray-400">
                 Contact Us
@@ -57,30 +51,11 @@ export const Footer = () => {
           </ul>
         </div>
 
-        {/* Blog & Articles */}
-        {/* <div>
-          <h3 className="text-lg font-semibold mb-4">Blog & Articles</h3>
-          <div className="space-y-4">
-            <div>
-              <h4 className="text-sm font-medium">
-                Content Creation: How Your Business Can Benefit from Outsourcing
-                Content Creation
-              </h4>
-              <p className="text-gray-400 text-xs">October 19, 2023</p>
-            </div>
-            <div>
-              <h4 className="text-sm font-medium">
-                Content Strategy: How to Create Effective Content for Your
-                Business
-              </h4>
-              <p className="text-gray-400 text-xs">July 19, 2023</p>
-            </div>
-          </div>
-        </div> */}
-
         {/* Get in Touch */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
+          <h3 className="text-lg font-semibold mb-4 text-center md:text-left">
+            Get in Touch
+          </h3>
           <form className="flex flex-col space-y-4">
             <input
               type="email"

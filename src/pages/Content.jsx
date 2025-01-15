@@ -333,74 +333,77 @@ const ContactInfo = () => {
     <>
   <div>
   <div
-    className="flex flex-col -mt-20 h-[31rem] md:flex-row items-center text-black"
-    style={{
-      backgroundImage: 'url("./pettern-bg2.png")',
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-    }}
-  >
-    {/* Left Section */}
-    <div className="w-full md:w-1/2 space-y-8 px-4 md:px-20 py-8 rounded-lg">
-      <h3 className="text-3xl sm:text-4xl font-bold text-black">
-        Our Working Process.
-      </h3>
-
-      {/* Step 1 */}
-      <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-4 md:space-y-0">
-        <div className="flex-shrink-0 bg-[#0e6938] p-2 rounded-full">
-          <span className="text-white text-lg font-bold">1</span>
-        </div>
-        <div>
-          <h4 className="text-xl font-bold">Get Started</h4>
-          <p className="text-sm">
-            Reaching out to us is really easy! Simply hit "Contact Us" on
-            our website, fill in your details, and we’ll get back to you in
-            no time. Let’s start the conversation today!
-          </p>
-        </div>
+  className="flex flex-col md:flex-row items-center text-black h-auto md:h-[31rem] -mt-20"
+  style={{
+    backgroundImage: 'url("./pettern-bg2.png")',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Left Section */}
+  <div className="w-full md:w-1/2 space-y-8 px-6 md:px-20 py-8 rounded-lg">
+  <h3 className="text-3xl sm:text-4xl font-bold text-black text-center md:text-left mt-4 md:mt-0">
+  Our Working Process.
+</h3>
+    {/* Step 1 */}
+    <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-4 md:space-y-0">
+      <div className="flex-shrink-0 bg-[#0e6938] p-2 rounded-full flex items-center justify-center">
+        <span className="text-white text-lg font-bold">1</span>
       </div>
-
-      {/* Step 2 */}
-      <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-4 md:space-y-0">
-        <div className="flex-shrink-0 bg-[#0e6938] p-2 rounded-full">
-          <span className="text-white text-lg font-bold">2</span>
-        </div>
-        <div>
-          <h4 className="text-xl font-bold">Requirement Gathering</h4>
-          <p className="text-sm">
-            Our team will reach out to chat about your needs and goals,
-            providing all the details you need about pricing and timelines.
-          </p>
-        </div>
-      </div>
-
-      {/* Step 3 */}
-      <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-4 md:space-y-0">
-        <div className="flex-shrink-0 bg-[#0e6938] p-2 rounded-full">
-          <span className="text-white text-lg font-bold">3</span>
-        </div>
-        <div>
-          <h4 className="text-xl font-bold">Final Approval</h4>
-          <p className="text-sm">
-            Your content will be expertly crafted to meet your highest
-            expectations by our team of specialists, then delivered to you
-            on time for your final approval. We ensure quality and precision
-            every step of the way!
-          </p>
-        </div>
+      <div>
+        <h4 className="text-xl font-bold">Get Started</h4>
+        <p className="text-sm">
+          Reaching out to us is really easy! Simply hit "Contact Us" on our
+          website, fill in your details, and we’ll get back to you in no time.
+          Let’s start the conversation today!
+        </p>
       </div>
     </div>
 
-    {/* Right Section */}
-    <div className="w-full md:w-[30rem] mx-auto flex justify-center mt-8 md:mt-0">
+    {/* Step 2 */}
+    <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-4 md:space-y-0">
+      <div className="flex-shrink-0 bg-[#0e6938] p-2 rounded-full flex items-center justify-center">
+        <span className="text-white text-lg font-bold">2</span>
+      </div>
+      <div>
+        <h4 className="text-xl font-bold">Requirement Gathering</h4>
+        <p className="text-sm">
+          Our team will reach out to chat about your needs and goals, providing
+          all the details you need about pricing and timelines.
+        </p>
+      </div>
+    </div>
 
-      <div className="relative">
-        <img src="Write Out Logo-Recovered.png edrfty.png" alt="Checklist Illustration" className="w-full " />
+    {/* Step 3 */}
+    <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-4 md:space-y-0">
+      <div className="flex-shrink-0 bg-[#0e6938] p-2 rounded-full flex items-center justify-center">
+        <span className="text-white text-lg font-bold">3</span>
+      </div>
+      <div>
+        <h4 className="text-xl font-bold">Final Approval</h4>
+        <p className="text-sm">
+          Your content will be expertly crafted to meet your highest
+          expectations by our team of specialists, then delivered to you on time
+          for your final approval. We ensure quality and precision every step of
+          the way!
+        </p>
       </div>
     </div>
   </div>
+
+  {/* Right Section */}
+  <div className="w-full md:w-[30rem] mx-auto flex justify-center mt-8 md:mt-0">
+    <div className="relative w-[80%] sm:w-[60%] md:w-auto">
+      <img
+        src="Write Out Logo-Recovered.png edrfty.png"
+        alt="Checklist Illustration"
+        className="w-full"
+      />
+    </div>
+  </div>
+</div>
+
 </div>
 
   
