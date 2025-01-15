@@ -333,7 +333,7 @@ const ContactInfo = () => {
     <>
   <div>
   <div
-    className="flex flex-col md:flex-row items-center text-black"
+    className="flex flex-col -mt-20 h-[31rem] md:flex-row items-center text-black"
     style={{
       backgroundImage: 'url("./pettern-bg2.png")',
       backgroundSize: "cover",
@@ -394,7 +394,7 @@ const ContactInfo = () => {
     </div>
 
     {/* Right Section */}
-    <div className="w-full md:w-auto mx-auto flex justify-center mt-8 md:mt-0">
+    <div className="w-full md:w-[30rem] mx-auto flex justify-center mt-8 md:mt-0">
 
       <div className="relative">
         <img src="Write Out Logo-Recovered.png edrfty.png" alt="Checklist Illustration" className="w-full " />
@@ -424,7 +424,7 @@ const WebUI = () => {
     </div>
 
     {/* Right Section: FAQ Content */}
-    <div className="text-center md:text-left">
+    <div className="text-center  md:text-left">
       <h2 className="text-2xl font-bold mb-4 mt-10">Frequently Asked Questions</h2>
       <div className="space-y-4">
         <div className="border-b px-4 border-gray-300">
