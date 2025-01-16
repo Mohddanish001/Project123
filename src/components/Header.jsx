@@ -31,14 +31,6 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  to="/blogs"
-                  className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
-                >
-                  Blogs
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/about"
                   className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
                 >
@@ -50,7 +42,15 @@ export const Header = () => {
                   to="/contact"
                   className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
                 >
-                  Contact
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blogs"
+                  className="cursor-pointer hover:text-[#0e6938] text-xl transition-colors"
+                >
+                  Blogs
                 </Link>
               </li>
             </ul>
@@ -102,15 +102,6 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  to="/blogs"
-                  className="block cursor-pointer hover:text-orange-600 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Blogs
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/about"
                   className="block cursor-pointer hover:text-orange-600 transition-colors"
                   onClick={() => setIsOpen(false)}
@@ -125,7 +116,16 @@ export const Header = () => {
                   className="block cursor-pointer hover:text-orange-600 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  Contact
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blogs"
+                  className="block cursor-pointer hover:text-orange-600 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Blogs
                 </Link>
               </li>
             </ul>

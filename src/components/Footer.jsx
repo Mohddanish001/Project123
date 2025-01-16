@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
   const [email, setEmail] = useState("");
@@ -17,92 +18,76 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-8">
-      <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <footer className="bg-black text-white py-12">
+      <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         {/* Connect With Us */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-center md:text-left">
-            Connect With Us.
-          </h3>
-          <div className="flex justify-center md:justify-start space-x-4">
-            <a href="#" className="hover:text-gray-400">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" className="hover:text-gray-400">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" className="hover:text-gray-400">
-              <i className="fab fa-instagram"></i>
-            </a>
-          </div>
+          <img className="w-32 md:w-40 mx-auto mb-6" src="logo34.png" alt="Company Logo" />
+          <p className="text-gray-400 mb-6">
+          Welcome to writeout, your go-to hub for creative content and digital marketing solutions. As content experts, we provide a full spectrum of services tailored to help your business excel in today’s fast-paced digital world. 
+          </p>
+          
+         
+
+<div className="flex justify-center space-x-6 text-xl">
+  <a href="#" className="hover:text-gray-400">
+    <FaFacebookF />
+  </a>
+  <a href="#" className="hover:text-gray-400">
+    <FaLinkedinIn />
+  </a>
+  <a href="#" className="hover:text-gray-400">
+    <FaInstagram />
+  </a>
+</div>
+
         </div>
 
         {/* Useful Links */}
         <div>
-          <h3 className="text-lg  font-semibold mb-4 text-center md:text-left ">
-            Useful Links
-          </h3>
-          <ul className="space-y-2 text-center md:text-left ">
+          <h3 className="text-lg font-semibold mb-4 text-center sm:text-left text-gray-300">Useful Links</h3>
+          <ul className="space-y-4 text-center sm:text-left">
             <li>
-              <a href="/" className="hover:text-gray-400">
-                Home
-              </a>
+              <a href="/" className="hover:text-gray-400">Home</a>
             </li>
             <li>
-              <a href="/blogs" className="hover:text-gray-400">
-                Blogs
-              </a>
+              <a href="/blogs" className="hover:text-gray-400">Blogs</a>
             </li>
             <li>
-              <a href="/about" className="hover:text-gray-400">
-                About Us
-              </a>
+              <a href="/about" className="hover:text-gray-400">About Us</a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-gray-400">
-                Contact Us
-              </a>
+              <a href="/contact" className="hover:text-gray-400">Contact Us</a>
             </li>
           </ul>
         </div>
 
         {/* Get in Touch */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-center md:text-left">
-            Get in Touch
-          </h3>
-          <form className="flex flex-col space-y-4 w-full max-w-md" onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Enter your e-mail"
-            className="w-full px-4 py-2 text-black rounded-full border border-gray-300"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <button 
-            type="submit"
-            className="bg-blue-500 px-6 py-2 rounded-full text-white hover:bg-blue-600"
-          >
-            Subscribe
-          </button>
-        </form>
-        {message && <p className="mt-4 text-green-600">{message}</p>}
+          <h3 className="text-lg font-semibold mb-4 text-center sm:text-left text-gray-300">Get in Touch</h3>
+          <form className="flex flex-col space-y-4 w-full max-w-sm mx-auto sm:mx-0" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full px-4 py-3 text-black rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <button 
+              type="submit"
+              className="bg-blue-500 px-6 py-3 rounded-full text-white font-semibold hover:bg-blue-600 transition duration-300"
+            >
+              Subscribe
+            </button>
+          </form>
+          {message && <p className="mt-4 text-green-600 text-center">{message}</p>}
         </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-        <p className="text-xs">Copyright by Writeout. All rights reserved.</p>
-        <div className="space-x-4 mt-2">
-          <a href="#" className="text-xs hover:text-gray-400">
-            Privacy & Policy
-          </a>
-          <span>|</span>
-          <a href="#" className="text-xs hover:text-gray-400">
-            Conditions
-          </a>
-        </div>
+      <div className="mt-12 border-t border-gray-300 pt-6 text-center text-gray-600">
+        <p>&copy; {new Date().getFullYear()} Writeout. All Rights Reserved.</p>
       </div>
     </footer>
   );

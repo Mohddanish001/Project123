@@ -456,7 +456,7 @@ const WebUI = () => {
           {openIndex === 1 && (
             <div className="mt-2">
               <p>
-                You can reach us via email at info@writeout.in or call +91-9773754783.
+              You can contact our support team through emailing us at info@writeout.in or directly by calling us at +91-9773754783. We are at your service to help you!
               </p>
             </div>
           )}
@@ -472,7 +472,7 @@ const WebUI = () => {
           {openIndex === 2 && (
             <div className="mt-2">
               <p>
-                We are located at writeout, Block-A, Sangam Vihar, Dharampura Extension, Najafgarh, New Delhi, 110043.
+                We are located at writeout, C-65, First Floor, Sector-2 Noida, U.P-201301.
               </p>
             </div>
           )}

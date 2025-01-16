@@ -84,7 +84,7 @@ const BlogSection = () => {
     }));
   };
 
-  return (
+  return (  
     <>
       <Header />
       <div className=""  style={{

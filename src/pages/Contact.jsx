@@ -23,7 +23,7 @@ export const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https:192.168.1.24:8080/contact", formData);
+      const response = await axios.post("https://192.168.1.2:8023/contact", formData);
       console.log("Response:", response.data);
 
       alert("Form submitted successfully!");
