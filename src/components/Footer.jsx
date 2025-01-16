@@ -1,6 +1,21 @@
-import React from "react";
+import { useState } from "react";
+import axios from "axios";
 
 export const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://192.168.1.2:8023/subscribe", { email });
+      setMessage(response.data); // Success message
+      setEmail(""); // Clear input
+    } catch (error) {
+      setMessage("Error subscribing. Please try again.");
+    }
+  };
+
   return (
     <footer className="bg-black text-white py-8">
       <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -56,19 +71,23 @@ export const Footer = () => {
           <h3 className="text-lg font-semibold mb-4 text-center md:text-left">
             Get in Touch
           </h3>
-          <form className="flex flex-col space-y-4">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="p-2 bg-gray-800 text-white rounded border border-gray-600 focus:outline-none focus:border-gray-400"
-            />
-            <button
-              type="submit"
-              className="p-2 bg-purple-600 text-white rounded hover:bg-purple-700"
-            >
-              Submit
-            </button>
-          </form>
+          <form className="flex flex-col space-y-4 w-full max-w-md" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Enter your e-mail"
+            className="w-full px-4 py-2 text-black rounded-full border border-gray-300"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <button 
+            type="submit"
+            className="bg-blue-500 px-6 py-2 rounded-full text-white hover:bg-blue-600"
+          >
+            Subscribe
+          </button>
+        </form>
+        {message && <p className="mt-4 text-green-600">{message}</p>}
         </div>
       </div>
 
