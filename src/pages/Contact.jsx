@@ -24,7 +24,7 @@ export const Contact = () => {
 
     try {
       const response = await axios.post(
-        "http://192.168.1.21:8023/contact",
+        "https://apiig.fourbrick.in/contact",
         formData, // Data to be sent in JSON format
         {
           headers: {

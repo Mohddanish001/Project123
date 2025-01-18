@@ -10,7 +10,7 @@ export const Footer = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://192.168.1.21:8023/subscribe",
+        "https://apiig.fourbrick.in/subscribe",
         { email },
         {
           headers: {
