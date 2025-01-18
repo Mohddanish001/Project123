@@ -23,10 +23,16 @@ export const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://192.168.1.2:8023/contact", formData);
+      const response = await axios.post(
+        "http://192.168.1.21:8023/contact",
+        formData, // Data to be sent in JSON format
+        {
+          headers: {
+            "Content-Type": "application/json", // Explicitly set the content type
+          },
+        }
+      );
       console.log("Response:", response.data);
-
-      alert("Form submitted successfully!");
 
       // Reset the form fields
       setFormData({
@@ -37,7 +43,6 @@ export const Contact = () => {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("An error occurred while submitting the form. Please try again.");
     }
   };
 
