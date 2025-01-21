@@ -5,6 +5,18 @@ import { Home } from "../pages/Home";
 import { Contact } from "../pages/Contact";
 import { About } from "../pages/About";
 import BlogSection from "../pages/BlogSection";
+import ContentCreation from "../pages/ContentCreation";
+import SocialMediaContent from "../pages/SocialMediaContent";
+import SEOContentCreation from "../pages/SEOContentCreation";
+import BlogAndArticle from "../pages/BlogAndArticle";
+import WebsiteContentWriting from "../pages/WebsiteContentWriting";
+import CopyWriting from "../pages/CopyWriting";
+import ProductDescription from "../pages/ProductDescription";
+import PressReleases from "../pages/PressReleases";
+import EmailMarketing from "../pages/EmailMarketing";
+import GhostWriting from "../pages/GhostWriting";
+import ContentEditing from "../pages/ContentEditing";
+import Script from "../pages/Script";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +38,54 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <BlogSection />,
+      },
+      {
+        path: "/content-creations",
+        element: <ContentCreation />,
+      },
+      {
+        path: "/Social-Media-Content",
+        element: <SocialMediaContent />,
+      },
+      {
+        path: "/seo-friendly-content-writing",
+        element: <SEOContentCreation />,
+      },
+      {
+        path: "blog-&-articles-writing",
+        element: <BlogAndArticle />,
+      },
+      {
+        path: "website-content-writing",
+        element: <WebsiteContentWriting/>,
+      },
+      {
+        path: "copywriting-for-ads",
+        element: <CopyWriting/>,
+      },
+      {
+        path: "product-descriptions",
+        element: <ProductDescription/>,
+      },
+      {
+        path: "email-marketing-copy",
+        element: <EmailMarketing/>,
+      },
+      {
+        path: "press-releases",
+        element: <PressReleases/>,
+      },
+      {
+        path: "ghostwriting",
+        element: <GhostWriting/>,
+      },
+      {
+        path: "content-editing-&-error-free",
+        element: <ContentEditing/>,
+      },
+      {
+        path: "script-&-content-marketing",
+        element: <Script/>,
       },
     ],
   },

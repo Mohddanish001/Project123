@@ -55,7 +55,7 @@ export const About = () => {
             </h2>
             {/* Add Text Content */}
             <p className="text-gray-700 mb-4">
-              Welcome to Writeout – where words come to life, and ideas take
+              Welcome to QuillWhale – where words come to life, and ideas take
               flight! We're not just a content provider; we're your creative
               partner in building captivating, impactful, and memorable
               narratives. Whether it's blog posts, articles, social media
@@ -64,7 +64,7 @@ export const About = () => {
               lasting impression.
             </p>
             <p className="text-gray-700 mb-4">
-              At Writeout, we know that behind every great business is a great
+              At QuillWhale, we know that behind every great business is a great
               story – and we’re here to help you tell yours. We bring passion,
               precision, and personality to every piece of content, ensuring
               that your voice stands out in today’s noisy digital world. From
@@ -78,14 +78,14 @@ export const About = () => {
               goals, audience, and brand tone, so we can deliver content that
               truly reflects who you are. We’re not just about writing; we’re
               about writing right to help your business grow, connect, and
-              thrive. Join the Writeout family today and let us bring your
+              thrive. Join the QuillWhale family today and let us bring your
               content vision to life. Whether you're a startup or an established
               brand, we've got the perfect words waiting for you! Let’s create
               something extraordinary together.
             </p>
             <p className="text-gray-700 mb-4">
               We’re not just about writing; we’re about writing right to help
-              your business grow, connect, and thrive. Join the writeout family
+              your business grow, connect, and thrive. Join the QuillWhale family
               today and let us bring your content vision to life. Whether you're
               a startup or an established brand, we've got the perfect words
               waiting for you! Let’s create something extraordinary, together.

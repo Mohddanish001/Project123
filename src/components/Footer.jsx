@@ -33,12 +33,12 @@ export const Footer = () => {
 
   return (
     <footer className="bg-black text-white py-12">
-      <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Connect With Us */}
         <div>
-          <img className="w-32 md:w-40 mx-auto mb-6" src="logo34.png" alt="Company Logo" />
+          <img className="w-32 md:w-40 mx-auto mb-6" src="logos.png" alt="Company Logo" />
           <p className="text-gray-400 mb-6">
-            Welcome to Writeout, your go-to hub for creative content and digital marketing
+            Welcome to QuillWhale, your go-to hub for creative content and digital marketing
             solutions. As content experts, we provide a full spectrum of services tailored
             to help your business excel in today’s fast-paced digital world.
           </p>
@@ -84,7 +84,66 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-4 text-center sm:text-left text-gray-300">
+            Blog and Articles
+          </h3>
+          <div className="space-y-6">
+            {/* Blog Post 1 */}
+            <div className="flex items-center space-x-4">
+              <img
+                src="image 11.png"
+                alt="Blog 1"
+                className="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <a
+                  href="/blog/how-to-write-seo-content"
+                  className="block text-gray-200 hover:text-gray-400 font-medium"
+                >
+                  Polls and Quizzes
+                </a>
+                <p className="text-gray-400 text-sm">January 15, 2025</p>
+              </div>
+            </div>
 
+            {/* Blog Post 2 */}
+            <div className="flex items-center space-x-4">
+              <img
+                src="Untitled design (47).png"
+                alt="Blog 2"
+                className="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <a
+                  href="/blog/content-marketing-strategies"
+                  className="block text-gray-200 hover:text-gray-400 font-medium"
+                >
+                 Behind-the-Scenes Content
+                </a>
+                <p className="text-gray-400 text-sm">January 10, 2025</p>
+              </div>
+            </div>
+
+            {/* Blog Post 3 */}
+            <div className="flex items-center space-x-4">
+              <img 
+                src="image23.png"
+                alt="Blog 3"
+                className="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <a
+                  href="/blog/social-media-tips"
+                  className="block text-gray-200 hover:text-gray-400 font-medium"
+                >
+               User Generated Content (UGC)
+                </a>
+                <p className="text-gray-400 text-sm">January 5, 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Get in Touch */}
         <div>
           <h3 className="text-lg font-semibold mb-4 text-center sm:text-left text-gray-300">
@@ -119,7 +178,7 @@ export const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-12 border-t border-gray-300 pt-6 text-center text-gray-600">
-        <p>&copy; {new Date().getFullYear()} Writeout. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} QuillWhale. All Rights Reserved.</p>
       </div>
     </footer>
   );

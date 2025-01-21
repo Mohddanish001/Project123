@@ -133,7 +133,7 @@ export const Contact = () => {
                 Sector - 02, Noida Uttar Pradesh - 201301 India
               </p>
               <p className="mb-2">
-                <span className="font-bold">Phone:</span> +91 0909090449
+                <span className="font-bold">Phone:</span> +1 (251) 901-4496
               </p>
               {/* <p>
                 <span className="font-bold">Email:</span>{" "}
