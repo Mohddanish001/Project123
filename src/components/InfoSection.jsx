@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const InfoSection = () => {
-  const [activeSection, setActiveSection] = useState("Ads Copywriting");
+  const [activeSection, setActiveSection] = useState("Hire Article Experts");
 
   const handleClick = (section) => {
     setActiveSection(section);
@@ -14,70 +14,50 @@ const InfoSection = () => {
     >
       {/* Navigation Bar */}
       <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 rounded-full text-black py-4 px-6">
-        {["Ads Copywriting", "GhostWriting", "Content Marketing", "Error-Free Content"].map((section) => (
-          <span
-            key={section}
-            onClick={() => handleClick(section)}
-            className={`cursor-pointer font-josefin text-center hover:text-[#0e6938] transition-colors duration-300 text-base sm:text-lg md:text-xl ${
-              activeSection === section ? "text-[#0e6938] underline" : ""
-            }`}
-          >
-            {section}
-          </span>
-        ))}
+        {["Hire Article Experts", "Content Marketing", "Article Experts"].map(
+          (section) => (
+            <span
+              key={section}
+              onClick={() => handleClick(section)}
+              className={`cursor-pointer font-josefin text-center bg-black hover:-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent transition-colors duration-300 text-base sm:text-lg md:text-xl ${
+                activeSection === section
+                  ? "bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent underline"
+                  : ""
+              }`}
+            >
+              {section}
+            </span>
+          )
+        )}
       </div>
 
       {/* Active Section Content */}
       {activeSection && (
-       <div className="flex flex-col items-center lg:flex-row lg:items-center justify-between gap-10 py-12 px-6 sm:px-12 md:px-20 lg:px-40">
+        <div className="flex flex-col items-center lg:flex-row lg:items-center justify-between gap-10 space-x-10 py-12 px-6 sm:px-12 md:px-20 lg:px-40">
           {/* Text Content */}
           <div className="flex-1 max-w-full lg:max-w-lg text-center lg:text-left">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-josefin text-black mb-4">
               {activeSection}
             </h2>
             <div className="text-base sm:text-lg lg:text-xl text-black font-josefin leading-relaxed">
-              {activeSection === "Ads Copywriting" && (
+              {activeSection === "Hire Article Experts" && (
                 <p className="text-lg text-justify">
-                  Our Ad Copywriting services are designed to create compelling, persuasive, and memorable content that drives action. Whether you're launching a new product, running a promotional campaign, or simply aiming to boost brand visibility, we craft powerful ad copy tailored to resonate with your target audience.
+                 Wanting to produce well-researched, captivating articles? Ordered copywriting service from our skilled article writers, QuillWhale! We provide content that is not only SEO-optimized and research-focused but also tailored to your specific requirements. Blogs, websites, and publications are intended to give the Butter team breath and connect them with LiQuid Papers.
                 </p>
-              )}
-              {activeSection === "GhostWriting" && (
-                <>
-                  <p  className="text-lg text-justify">
-                    Writing content for individuals or brands who wish to publish under their name without actually writing it themselves.
-                  </p>
-                  <ul className="list-none text-lg text-justify  mt-4">
-                    <li>Biographies</li>
-                    <li>eBook Writing</li>
-                    <li>Book Writing</li>
-                    <li>Speeches</li>
-                  </ul>
-                </>
               )}
               {activeSection === "Content Marketing" && (
                 <>
-                  <p  className="text-lg text-justify">
-                    Transforming words into impactful stories, we craft content that engages, informs, and converts.
+                  <p className="text-lg text-justify">
+                  Step up your brand with impactful content marketing by QuillWhale! Our skilled team provides incredible content that your audience gets, trusts, and makes abroad conversions according to the stay they may refer. We create strategies that are ani-visible-sta and boost your online visibility. Join us for a storytelling session and have the chance of your business flourishing!{" "}
                   </p>
-                  <ul className="list-none text-lg text-justify  mt-4">
-                    <li>SEO-friendly Content</li>
-                    <li>Social Media Content</li>
-                    <li>Product Copywriting</li>
-                    <li>Ad Copywriting</li>
-                  </ul>
                 </>
               )}
-              {activeSection === "Error-Free Content" && (
+              {activeSection === "Article Experts" && (
                 <>
-                  <p>
-                    Refining and enhancing existing content by ensuring it is error-free, well-structured, and grammatically correct.
+                  <p className="text-lg text-justify">
+                  How-to content on industry topics, links to the hottest trends, and SEO tips are the main highlights of our writers' work. Our experts are masters of the written word; they write with flair and are readily accessible. You will experience the magic of your topics, and we will give them life with our exquisite touch. We will all be awe-inspiring when we produce memorable articles for you!
                   </p>
-                  <ul className="list-disc text-start  mt-4">
-                    <li>Grammar and Spelling Checks</li>
-                    <li>Content Polishing</li>
-                    <li>Rewriting for Clarity and Engagement</li>
-                    <li>Formatting and Structuring Content</li>
-                  </ul>
+                  
                 </>
               )}
             </div>
@@ -85,30 +65,23 @@ const InfoSection = () => {
 
           {/* Image Content */}
           <div className="flex-1 max-w-full sm:max-w-md lg:max-w-lg">
-            {activeSection === "Ads Copywriting" && (
+            {activeSection === "Hire Article Experts" && (
               <img
-                src="image.png"
+                src="hire.png"
                 alt="Ads Copywriting"
-                className="rounded-lg shadow-lg object-cover w-full h-56 sm:h-64 md:h-72 lg:h-80"
-              />
-            )}
-            {activeSection === "GhostWriting" && (
-              <img
-                src="image1.png"
-                alt="GhostWriting"
                 className="rounded-lg shadow-lg object-cover w-full h-56 sm:h-64 md:h-72 lg:h-80"
               />
             )}
             {activeSection === "Content Marketing" && (
               <img
-                src="Untitled design (3).jpg"
+                src="content.png"
                 alt="Content Marketing"
                 className="rounded-lg shadow-lg object-cover w-full h-56 sm:h-64 md:h-72 lg:h-80"
               />
             )}
-            {activeSection === "Editing & Error-Free" && (
+            {activeSection === "Article Experts" && (
               <img
-                src="Untitled design (21).png"
+                src="Article.png"
                 alt="Editing & Error-Free"
                 className="rounded-lg shadow-lg object-cover w-full h-56 sm:h-64 md:h-72 lg:h-80"
               />
@@ -121,4 +94,3 @@ const InfoSection = () => {
 };
 
 export default InfoSection;
-    

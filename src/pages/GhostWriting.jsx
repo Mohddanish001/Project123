@@ -2,86 +2,70 @@ import React from "react";
 
 const GhostWriting = () => {
   return (
-    <div className="min-h-screen mt-10    py-10 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto rounded-md px-24 py-10">
+    <div className="min-h-screen py-10 px-4 sm:px-6 md:px-8">
+      <div className="max-w-7xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white shadow-md">
+        {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
           <div className="flex-1">
-            <h1 className="text-5xl font-bold  text-black mb-4">
-              Ghostwriting.
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+              Ghostwriting
             </h1>
-            <p className="text-black font-josefin text-justify text-lg">
-              Writing content for individuals or brands who wish to publish
-              under their name without actually writing it themselves.
+            <p className="text-black text-base sm:text-lg text-justify">
+              Crafting compelling content for individuals or brands who wish to
+              publish under their name without writing it themselves.
             </p>
           </div>
         </div>
 
-        <div className="mb-10 px-10 text-justify">
-          <div className="mb-6">
-            <h2 className="text-gray-600  ">
-              <span className="text-black text-xl font-bold">
-                Biographies:-
-              </span>
-            </h2>
-            <p className="text-justify">
-              Let alone the attention of the readers, biographies are the
-              stories of the lives of people described engagingly and accurately
-              focused on the insights and accomplishments of the individual.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h2 className="text-gray-600 ">
-              <span className="text-black text-xl font-bold">
-                eBooks Writing:-
-              </span>
-            </h2>
-            <p>
-              {" "}
-              In a world that begs and brags about publishing digitally, eBooks
-              writing is a significant piece of a commodity that is uplifting
-              and engaging in a myriad of topics.{" "}
-            </p>
-          </div>
-          <div className="mb-6">
-            {" "}
-            <h2 className="text-gray-600  ">
-              <span className="text-black text-xl font-bold">
-                Books Writing:-
-              </span>
-            </h2>
-            <p>
-              Every type of book is included in the genres. Technology, in the
-              form of eBooks, has allowed authors to write short, powerful, and
-              inspiring poetry, fiction, and non-fiction scripts, discourses,
-              articles, and series to cater to the needs of their readers.{" "}
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <h2 className="text-gray-600 ">
-              <span className="text-black text-xl font-bold">Speeches:-</span>
-            </h2>
-            <p>
-              Writing eloquent and compelling speeches that bring a person's
-              thoughts and ideas forward to particular audiences is the job of
-              speechwriters for events, conferences, and public speaking
-              engagements.
-            </p>
-          </div>
+        {/* Services Section */}
+        <div className="mb-10 px-2 sm:px-4 md:px-8 text-justify">
+          {[
+            {
+              title: "Biographies",
+              description:
+                "We specialize in biographical services. Our biographies show the true character of the subject. They talk about their youth life, accomplishments, and, more importantly, their unique personality. Personal or professional, these are customized to give a brief overview of certain events that can help readers to get inspired.",
+            },
+            {
+              title: "eBooks Writing",
+              description:
+                " Our ebook writing service writes essays, looks for them, writes them, and then turns them into educational resources. In our established mix, these books can be amulets for clients, knowledge resources, or extensive explanations on topics. ",
+            },
+            {
+              title: "Books Writing",
+              description:
+                "The array of services starts with concept development to the final proofread manuscript. The book writing we offer extends from fiction non-fiction to memoirs and all of which we will create an engaging narrative that will make your vision come true. ",
+            },
+            {
+              title: "Speeches",
+              description:
+                "We are pretty good at preparing assertive and convincing speeches for all types of events. The key to our success is crafting messages that will be felt and memorized by you speaking and your audience listening. Our speeches are adapted to the tone, the purpose, and the style you want.",
+            },
+          ].map((service, index) => (
+            <div key={index} className="mb-6">
+              <h2 className="text-lg sm:text-xl text-black font-bold mb-2">
+                {service.title}:
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base">
+                {service.description}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="text-center bg-[#0e6938] text-white py-8 px-4 rounded-md shadow-md">
-          <h2 className="text-3xl font-bold mb-2">
-            Grow Your Business with Website Content Writing
-          </h2>
-          <p className="text-lg mb-6">
-            Ready to dominate search engine results and grow your business with
-            expertly crafted SEO content? Contact us today!
-          </p>
-          <button className="bg-white text-[#0e6938] font-bold px-6 py-3 rounded-md shadow-md hover:bg-gray-100 transition">
-            Get Started Now
-          </button>
+        <div className="p-4 sm:p-6 md:p-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4  bg-gradient-to-r from-[#DB7EEC] to-[#42175B]  text-white py-6 sm:py-8 md:py-10 px-6 sm:px-10 md:px-16 lg:px-28 rounded-md shadow-md">
+            <h2 className="text-lg sm:text-2xl md:text-3xl text-center md:text-start font-josefin">
+              <span className="font-bold">Are you looking for </span>
+              <br className="hidden md:block" /> personalized assistance
+            </h2>
+            <button
+              className="mt-4 md:mt-0 bg-white  bg-gradient-to-r from-[#DB7EEC] to-[#42175B] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md hover:bg-gray-100 transitionhover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
+                   transition-all duration-300"
+            >
+              Get Started Now
+            </button>
+          </div>
         </div>
       </div>
     </div>

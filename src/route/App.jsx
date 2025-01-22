@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet, useLocation, BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import SocialMediaContent from "./pages/SocialMediaContent";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import SocialMediaContent from "../pages/SocialMediaContent";
 
 export const App = () => {
   const location = useLocation();

@@ -21,6 +21,7 @@ import TextSlider from "../components/TextSlider";
 import { TypingContent } from "../components/TypingContent";
 import GoogleReviews from "../components/GoogleReviews";
 import HappyClientsCounter from "../components/HappyClientsCounter";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 export default function Content() {
   const [leftRef, leftInView] = useInView({ threshold: 0.2 });
@@ -62,8 +63,23 @@ export default function Content() {
       <section className="bg-white ">
         {/* Left Image Section */}
         <TypingContent />
-
-        <div className="container mx-auto md:flex md:items-center md:space-x-12">
+        <div className="p-4 sm:p-6 md:p-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4  bg-gradient-to-r from-[#DB7EEC] to-[#42175B]  text-white py-6 sm:py-8 md:py-10 px-6 sm:px-10 md:px-16 lg:px-28 rounded-md shadow-md">
+            <h2 className="text-lg sm:text-2xl md:text-3xl text-center md:text-start font-josefin">
+              <span className="font-bold">Are you looking for </span>
+              <br className="hidden md:block" /> personalized assistance
+            </h2>
+            <button
+              className="mt-4 flex justify-between items-center gap-2 md:mt-0 bg-white bg-gradient-to-r from-[#DB7EEC] to-[#42175B] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md
+             hover:bg-gray-100 hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
+             transition-all duration-300 group"
+            >
+              Get Started Now
+              <FaLongArrowAltRight className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
+            </button>
+          </div>
+        </div>
+        <div className="container shadow-xl border rounded-lg p-2  mx-auto md:flex md:items-center md:space-x-12">
           <motion.div
             ref={leftRef}
             className="md:w-1/2 w-full"
@@ -72,7 +88,7 @@ export default function Content() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <img
-              src="/first1.png"
+              src="/first1 quillwhale image.png"
               alt="About Us Illustration"
               className="w-full rounded-lg h-auto"
             />
@@ -86,10 +102,12 @@ export default function Content() {
             animate={rightAnimation}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-josefin text-gray-800 mb-4">
-              Crafting Authentic Content, Powered by 100% Human Creativity.
+            <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold font-josefin text-black mb-4">
+              Crafting Authentic Content, Powered by{" "}
+              <span className="font-normal font-josefin">100% Human </span>{" "}
+              Creativity.
             </h2>
-            <p className="text-gray-600 font-josefin mb-6 text-base sm:text-lg">
+            <p className="text-gray-600 font-josefin  mb-6 text-base sm:text-lg">
               At QuillWhale, we believe in the ability of authentic, human-made
               content to impact people. Our group of professional writers
               creates original, captivating, and carefully adjusted content that
@@ -129,6 +147,8 @@ export default function Content() {
         </div>
       </section>
 
+      <HappyClientsCounter />
+
       <OurServices />
 
       <WebUI />
@@ -138,62 +158,12 @@ export default function Content() {
 }
 
 const OurServices = () => {
-  // const [isPlaying, setIsPlaying] = useState(true);
-
-  // const toggleAnimation = () => {
-  //   setIsPlaying(!isPlaying);
-  // };
-  // const services = [
-  //   {
-  //     title: "Content creation ",
-  //     description:
-  //       "Enhance your brand with our professional content creation services, offering everything from engaging blog posts to attention-grabbing social media copy and dynamic video content. We craft personalized stories that resonate with your audience and deliver tangible results. We are here to help you create a lasting expression.",
-  //     image: "/path-to-content-writing-image.png",
-  //   },
-  //   {
-  //     title: "Content consultation",
-  //     description:
-  //       "Our expert consultants will develop a strategy that aligns your website content with your business objectives, audience preferences, and current market trends. By incorporating targeted keywords, we’ll enhance your website’s ranking. We provide high-quality writing and editing that perfectly reflects your brand, and we’ll turn our ideas into stunning visuals that tell your story.",
-  //     image: "/path-to-graphic-designing-image.png",
-  //   },
-
-  //   {
-  //     title: "Customized content solutions",
-  //     description:
-  //       "Unleash your brand’s full potential with expert content solutions. We develop strategies and content that align with your specific goals, ensuring every message speaks directly to your audience. Whether through written, visual, or video content, we offer impactful solutions that drive engagement and success. Let us help you shine with content crafted just for you.",
-  //     image: "/path-to-app-development-image.png",
-  //   },
-  //   {
-  //     title: "Content writing ",
-  //     description:
-  //       "Harness the power of storytelling through our expert content writing services. We create compelling narratives that engage your audience and elevate your brand’s voice. From SEO-driven blog posts to Instagram Reels and short films, we craft content that resonates with your audience and delivers measurable results. Let us help you connect, inspire, and boost your brand with impactful words.",
-  //     image: "/path-to-consulting-image.png",
-  //   },
-  //   {
-  //     title: "Content strategy ",
-  //     description:
-  //       "Our experienced strategists will work with you to create content that resonates with your audience and drives measurable outcomes. We develop tailored strategies, optimize for SEO, and ensure consistent messaging across all platforms. Using data-driven insights, we refine and deliver content that accelerates your business growth.",
-  //     image: "/path-to-consulting-image.png",
-  //   },
-  //   {
-  //     title: "Content optimization ",
-  //     description:
-  //       "We optimize every aspect of your content—text, images, and multimedia—to ensure it’s SEO-friendly, easy to read, and mobile-responsive. By strategically using the right keywords and targeting your audience, we help you improve your rankings, attract more attention, and drive meaningful results. Let us transform your content into a powerful tool for success.",
-  //     image: "/path-to-consulting-image.png",
-  //   },
-  //   {
-  //     title: "Content management ",
-  //     description:
-  //       "Our Content Management service takes the stress out of organizing and maintaining your digital content. We handle everything from planning and scheduling to ensuring your content stays fresh and aligned with your brand. We make sure your content is consistent, accessible, and optimized, helping you connect with your audience at the ideal moment. Let us simplify content management so you can focus on what truly matters! Welcome to QuillWhale, your go-to hub for creative content and digital marketing solutions. As content experts, we provide a full spectrum of services tailored to help your business excel in today’s fast-paced digital world. From crafting premium-quality content to ensuring every detail aligns with your vision, we’re committed to meeting your needs and exceeding your expectations — always on time. Together, we'll bring your ideas to life and propel your success!",
-  //     image: "/path-to-consulting-image.png",
-  //   },
-  // ];
-
   return (
     <>
-      <section className="bg-white">
+      <section className="bg-white overflow-x-hidden">
+        {/* Background Section */}
         <div
-          className="bg-white p-8"
+          className="bg-white p-4 sm:p-6 md:p-8 lg:p-10"
           style={{
             backgroundImage: 'url("./bg.png")',
             backgroundSize: "cover",
@@ -201,154 +171,124 @@ const OurServices = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="flex flex-col lg:flex-row px-10 gap-8">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             {/* Left Section */}
             <div
-              className="w-full lg:w-1/3 mx-auto rounded-lg shadow-md p-5 text-center"
+              className="w-full lg:w-1/3 mx-auto rounded-lg shadow-md p-6 text-center bg-white"
               data-aos="fade-right"
             >
-              <h2 className="text-2xl md:text-3xl font-bold  mb-2 font-josefin">
-                What <span className="text-[#0e6938]">We Do?</span>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 font-josefin">
+                What{" "}
+                <span className="bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent">
+                  We Do?
+                </span>
               </h2>
-              <p className="text-gray-600 mb-4 text-sm md:text-base font-josefin">
+              <p className="text-gray-600 text-sm sm:text-base lg:text-lg font-josefin mb-4">
                 As dynamic Content Creation Specialists, QuillWhale specializes
                 in delivering engaging and impactful content solutions.
               </p>
               <img
                 src="four.png"
                 alt="Illustration"
-                className="w-full rounded-md mb-4"
+                className="w-full rounded-md mb-4 object-cover"
               />
-              <ul className="text-gray-700 space-y-2">
-                <li className="flex items-center font-bold gap-2 font-josefin">
-                  <span className="text-[#0e6938] font-bold">•</span> Know More
-                  About Us
-                </li>
-                <li className="flex items-center font-bold gap-2 font-josefin">
-                  <span className="text-[#0e6938] font-bold">•</span> Connect
-                  With Us
-                </li>
-                <li className="flex items-center font-bold gap-2 font-josefin">
-                  <span className="text-[#0e6938] font-bold">•</span> Find Our
-                  Services
-                </li>
+              <ul className="text-gray-700 space-y-3">
+                {[
+                  "Know More About Us",
+                  "Connect With Us",
+                  "Find Our Services",
+                ].map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-center font-bold gap-2 font-josefin"
+                  >
+                    <span className="bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent font-bold">
+                      •
+                    </span>{" "}
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Right Section */}
             <div
-              className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8"
+              className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6"
               data-aos="fade-left"
             >
-              {/* SEO Optimized */}
-              <div className="space-y-4">
-                <FontAwesomeIcon
-                  icon={faSearch}
-                  className="text-[#0e6938] text-3xl"
-                />
-                <h3 className="font-bold text-lg md:text-xl font-josefin">
-                  SEO Optimized
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base font-josefin">
-                  With a touch of creativity and a dash of smart keywords, we
-                  spin irresistible stories that captivate your audience and
-                  charm search engines, ensuring your message stands out and
-                  gets noticed.
-                </p>
-              </div>
-
-              {/* Quick Delivery Time */}
-              <div className="space-y-4">
-                <FontAwesomeIcon
-                  icon={faClock}
-                  className="text-[#0e6938] text-3xl"
-                />
-                <h3 className="font-bold text-lg md:text-xl font-josefin">
-                  Quick Delivery Time
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base font-josefin">
-                  At QuillWhale, we prioritize on-time delivery and have
-                  streamlined processes that ensure smooth and efficient project
-                  completion every time.
-                </p>
-              </div>
-
-              {/* Original Content */}
-              <div className="space-y-4">
-                <FontAwesomeIcon
-                  icon={faPenNib}
-                  className="text-[#0e6938] text-3xl"
-                />
-                <h3 className="font-bold text-lg md:text-xl font-josefin">
-                  Original Content
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base font-josefin">
-                  At QuillWhale, we take pride in crafting 100% original,
-                  plagiarism-free content that's perfectly aligned with your
-                  brand’s voice. This ensures that it truly connects with your
-                  audience and reflects your unique identity.
-                </p>
-              </div>
-
-              {/* Quick Revisions */}
-              <div className="space-y-4">
-                <FontAwesomeIcon
-                  icon={faRedo}
-                  className="text-[#0e6938] text-3xl"
-                />
-                <h3 className="font-bold text-lg md:text-xl font-josefin">
-                  Quick Revisions
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base font-josefin">
-                  Customer satisfaction is what we prioritize the most. With
-                  swift revisions and tailored support, we go above and beyond
-                  to ensure we not only meet, but exceed your expectations.
-                </p>
-              </div>
+              {[
+                {
+                  icon: faSearch,
+                  title: "SEO Optimized",
+                  description:
+                    "With a touch of creativity and a dash of smart keywords, we spin irresistible stories that captivate your audience and charm search engines.",
+                },
+                {
+                  icon: faClock,
+                  title: "Quick Delivery Time",
+                  description:
+                    "At QuillWhale, we prioritize on-time delivery and have streamlined processes that ensure smooth and efficient project completion every time.",
+                },
+                {
+                  icon: faPenNib,
+                  title: "Original Content",
+                  description:
+                    "We take pride in crafting 100% original, plagiarism-free content that's perfectly aligned with your brand’s voice, ensuring that it truly connects with your audience.",
+                },
+                {
+                  icon: faRedo,
+                  title: "Quick Revisions",
+                  description:
+                    "Customer satisfaction is our priority. With swift revisions and tailored support, we go above and beyond to ensure we exceed your expectations.",
+                },
+              ].map((item, idx) => (
+                <div key={idx} className="space-y-3">
+                  <FontAwesomeIcon
+                    icon={item.icon}
+                    className="bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent text-3xl"
+                  />
+                  <h3 className="font-bold text-base sm:text-lg lg:text-xl font-josefin">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base font-josefin">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className="p-4 sm:p-6 md:p-10">
-          <div className="flex flex-col md:flex-row mt-10 bg-[#0e6938] text-white py-6 sm:py-8 md:py-10 px-6 sm:px-10 md:px-28 rounded-md shadow-md justify-between items-center">
-            <h2 className="text-lg sm:text-2xl md:text-3xl text-center md:text-start font-josefin">
-              <span className="font-bold">Are you looking for </span>
-              <br className="hidden md:block" /> personalized assistance
-            </h2>
-            <button className="mt-4 md:mt-0 bg-white text-[#0e6938] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md hover:bg-gray-100 transition">
-              Get Started Now
-            </button>
-          </div>
-        </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between px-20 bg-gray-50 p-4 sm:p-6 md:p-8 lg:p-12 gap-6">
-          {/* Left Section */}
-          <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-josefin text-gray-800">
-              Content <span className="text-[#0e6938]">that Walks</span>, Talks
-              & Sells for you
-            </h1>
-            <p className="text-gray-600 mt-4 sm:mt-6 text-sm md:text-base lg:text-lg font-josefin">
-              Introducing the ultimate marketing game-changer: Content that
-              walks, talks, and sells for you. With QuillWhale, we blend the art
-              of storytelling, persuasive language, and stunning visuals to
-              craft irresistible content that captures attention, keeps
-              audiences hooked, and drives conversions.
-            </p>
-            <p className="text-gray-600 mt-3 sm:mt-4 text-sm md:text-base lg:text-lg font-josefin">
-              Watch your business soar to new heights!
-            </p>
-          </div>
-
-          {/* Right Section */}
-          <div
-            className="md:w-1/2 flex justify-center mt-6 md:mt-0"
-            data-aos="flip-right"
-          >
-            <img
-              src="82250 [Converted].png"
-              alt="Illustration of content and marketing"
-              className="max-w-full h-auto"
-            />
+        {/* Hero Section */}
+        <div className="p-10">
+          <div className="flex flex-col  md:flex-row shadow-xl border rounded-2xl  items-center   justify-between gap-6 px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-50 py-6 sm:py-8 md:py-10 lg:py-12">
+            <div className="md:w-1/2 text-center  md:text-left ">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-josefin text-gray-800">
+                Content{" "}
+                <span className=" bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent">
+                  that Walks
+                </span>
+                , Talks & Sells for you
+              </h1>
+              <p className="text-gray-600 mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg font-josefin">
+                With QuillWhale, we craft irresistible content that blends
+                storytelling, persuasive language, and stunning visuals to
+                capture attention and drive conversions.
+              </p>
+              <p className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg font-josefin">
+                Watch your business soar to new heights!
+              </p>
+            </div>
+            <div
+              className="md:w-1/2 flex justify-center mt-6 md:mt-0"
+              data-aos="flip-right"
+            >
+              <img
+                src="82250 [Converted].png"
+                alt="Illustration of content and marketing"
+                className="max-w-full h-auto object-contain"
+              />
+            </div>
           </div>
         </div>
 
@@ -362,15 +302,16 @@ const OurServices = () => {
 
 const ContactInfo = () => {
   const logos = [
-    { src: "wordpress.webp", alt: "WordPress" },
-    { src: "Mailchamp.webp", alt: "Mailchimp" },
-    { src: "meta.webp", alt: "Meta" },
-    { src: "google trands.webp", alt: "Google Trends" },
-    { src: "shopify.webp", alt: "Shopify" },
-    { src: "htm&css.webp", alt: "HTML & CSS" },
-    { src: "semrush.webp", alt: "SEMRush" },
-    { src: "ubersuggest.webp", alt: "Ubersuggest" },
-    { src: "googleanylics.webp", alt: "Google Analytics" },
+    { src: "bcg-icon.svg", alt: "WordPress" },
+    { src: "hsbc-icon.svg", alt: "Mailchimp" },
+    { src: "redbus-icon.svg", alt: "Shopify" },
+    { src: "icici-icon.svg", alt: "Meta" },
+
+    { src: "thomas-icon.svg", alt: "HTML & CSS" },
+    { src: "tata-icon.svg", alt: "Google Trends" },
+    { src: "upgrad-icon.svg", alt: "SEMRush" },
+    { src: "wazirx-icon.svg", alt: "Ubersuggest" },
+    // { src: "googleanylics.webp", alt: "Google Analytics" },
   ];
 
   const sliderSettings = {
@@ -391,114 +332,45 @@ const ContactInfo = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
         },
       },
     ],
   };
   return (
     <>
-      <div>
-        {/* <div
-  className="flex flex-col md:flex-row items-center text-black h-auto md:h-[31rem] -mt-20"
-  style={{
-    backgroundImage: 'url("./pettern-bg2.png")',
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
->
-  
-  <div className="w-full md:w-1/2 space-y-8 px-6 sm:px-12 md:px-20 py-8 rounded-lg">
-    <h3 className="text-3xl sm:text-4xl font-bold font-josefin text-black text-center md:text-left mt-4 md:mt-0">
-      Our Working Process.
-    </h3>
-
- 
-    <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-      <div className="flex-shrink-0 bg-[#0e6938] p-4 rounded-full flex items-center justify-center">
-        <span className="text-white text-lg font-bold font-josefin">1</span>
-      </div>
-      <div>
-        <h4 className="text-xl font-bold font-josefin">Get Started</h4>
-        <p className="text-sm sm:text-base font-josefin">
-          Reaching out to us is really easy! Simply hit "Contact Us" on our
-          website, fill in your details, and we’ll get back to you in no time.
-          Let’s start the conversation today!
-        </p>
-      </div>
-    </div>
-
- 
-    <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-      <div className="flex-shrink-0 bg-[#0e6938] p-4 rounded-full flex items-center justify-center">
-        <span className="text-white text-lg font-bold font-josefin">2</span>
-      </div>
-      <div>
-        <h4 className="text-xl font-bold font-josefin">Requirement Gathering</h4>
-        <p className="text-sm sm:text-base font-josefin">
-          Our team will reach out to chat about your needs and goals, providing
-          all the details you need about pricing and timelines.
-        </p>
-      </div>
-    </div>
-
-
-    <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-      <div className="flex-shrink-0 bg-[#0e6938] p-4 rounded-full flex items-center justify-center">
-        <span className="text-white text-lg font-bold font-josefin">3</span>
-      </div>
-      <div>
-        <h4 className="text-xl font-bold font-josefin">Final Approval</h4>
-        <p className="text-sm sm:text-base font-josefin">
-          Your content will be expertly crafted to meet your highest
-          expectations by our team of specialists, then delivered to you on time
-          for your final approval. We ensure quality and precision every step of
-          the way!
-        </p>
-      </div>
-    </div>
-  </div>
-
-
-  <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
-    <div className="relative w-[80%] sm:w-[60%] md:w-[30rem]">
-      <img
-        src="Write Out Logo-Recovered.png edrfty.png"
-        alt="Checklist Illustration"
-        className="w-full h-auto"
-      />
-    </div>
-  </div>
-</div> */}
-      </div>
       <GoogleReviews />
-      <HappyClientsCounter />
-      <div className="text-center bg-gray-900">
-        <h3 className="text-white text-2xl sm:text-3xl pt-10 font-josefin py-4">
+
+      <div className="text-center flex flex-col items-center justify-center bg-white overflow-hidden">
+        <h3 className="text-black text-2xl sm:text-3xl pt-10 font-josefin py-4">
           Our Clients
         </h3>
 
-        <Slider
-          {...sliderSettings}
-          className="mx-auto px-4 sm:px-10 md:px-20 lg:px-40"
-        >
-          {logos.map((logo, index) => (
-            <div key={index} className="p-2">
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="w-24 sm:w-28 md:w-32 lg:w-40 h-auto mx-auto transform hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          ))}
-        </Slider>
+        <div className="w-full overflow-x-hidden ">
+          <Slider
+            {...sliderSettings}
+            className="w-full max-w-screen-xl mx-auto px-4 py-5 sm:px-6 md:px-10 lg:px-20 xl:px-32"
+          >
+            {logos.map((logo, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center p-2 transition-transform duration-300 transform hover:scale-105"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-8 sm:h-8 md:h-6 lg:h-8 xl:h-6 object-contain"
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </>
   );
@@ -532,40 +404,48 @@ const WebUI = () => {
           </div>
 
           <div className="text-center md:text-left">
-            <h2 className="text-xl sm:text-2xl font-josefin font-bold mb-4 mt-10">
+            {/* <h2 className="text-xl sm:text-2xl font-josefin font-bold mb-4 mt-10">
               FAQ's
-            </h2>
+            </h2> */}
             <div className="space-y-4">
-              <div className="border-b px-4 border-gray-300">
+              <div className="border-b px-4  border-gray-300">
                 <button
-                  className="w-full text-left font-semibold py-2 focus:outline-none"
+                  className="w-full text-left font-josefin text-black py-2 focus:outline-none"
                   onClick={() => toggleAccordion(0)}
                 >
-                  What is QuillWhale?
+                  How can high-quality content help improve Your online
+                  presence?
                 </button>
                 {openIndex === 0 && (
                   <div className="mt-2">
                     <p>
-                      QuillWhale is a content management service that helps you
-                      create professional documents with ease.
+                      The optimal content of the highest quality increases the
+                      effectiveness of your online presence by persuading your
+                      audience, gaining their trust, and growing the website's
+                      position on the search engines. Establishing your brand as
+                      an expert in your field draws more users in and raises the
+                      number of people who visit your website for free, which
+                      finally brings about the conversion of a sale.
                     </p>
                   </div>
                 )}
               </div>
 
-              <div className="border-b px-4 border-gray-300">
+              <div className="border-b px-4  border-gray-300">
                 <button
-                  className="w-full text-left font-semibold py-2 focus:outline-none"
+                  className="w-full text-left font-josefin py-2 focus:outline-none"
                   onClick={() => toggleAccordion(1)}
                 >
-                  How can I contact support?
+                  Can you help with keyword research and integration?
                 </button>
                 {openIndex === 1 && (
                   <div className="mt-2">
                     <p>
-                      You can contact our support team by emailing us at
-                      info@QuillWhale.in or by calling +91-9773754783. We are
-                      here to help!
+                      Yeah, sure, we can do a lot of things, including excellent
+                      keyword research and integration. Observe the positions of
+                      these keywords in your articles, how you present yourself,
+                      and whether that directs people to your site, thus
+                      allowing you to rank higher in search engine results.
                     </p>
                   </div>
                 )}
@@ -573,16 +453,67 @@ const WebUI = () => {
 
               <div className="border-b px-4 border-gray-300">
                 <button
-                  className="w-full text-left font-semibold py-2 focus:outline-none"
+                  className="w-full text-left font-josefin py-2 focus:outline-none"
                   onClick={() => toggleAccordion(2)}
                 >
-                  Where are you located?
+                  Do you provide content for social media or email campaigns
                 </button>
                 {openIndex === 2 && (
                   <div className="mt-2">
                     <p>
-                      We are located at QuillWhale, C-65, First Floor, Sector-2
-                      Noida, U.P-201301.
+                      Absolutely! We create content articles for different
+                      social media messages and e-mail strategies. We create
+                      eye-catching content for Facebook, Twitter, LinkedIn, and
+                      Instagram, as well as persuasive newsletters and
+                      promotional and follow-up e-mail campaigns.
+                    </p>
+                  </div>
+                )}
+              </div>
+              <div className="border-b px-4 border-gray-300">
+                <button
+                  className="w-full text-left font-josefin py-2 focus:outline-none"
+                  onClick={() => toggleAccordion(1)}
+                >
+                  Do you have professional editors to review the content?
+                </button>
+                {openIndex === 3 && (
+                  <div className="mt-2">
+                    <p>
+                      Of course, we have a team of experienced editors who
+                      carefully review articles, correct grammar and spelling
+                      mistakes, and make the articles more comprehensible,
+                      well-organized, and engaging. We pay close attention to
+                      the specifics and subtleties of style and structure of the
+                      writing itself, which, among other things, include
+                      improving the readability and sharpness of the text and
+                      providing scientific proofreading, which finally leads to
+                      the perfect resolution of any grammar, spelling, and
+                      structural errors.
+                    </p>
+                  </div>
+                )}
+              </div>
+              <div className="border-b px-4 border-gray-300">
+                <button
+                  className="w-full text-left font-josefin py-2 focus:outline-none"
+                  onClick={() => toggleAccordion(1)}
+                >
+                  What is content writing, and why is it important for my
+                  business?
+                </button>
+                {openIndex === 4 && (
+                  <div className="mt-2">
+                    <p>
+                      Writing content is concerned with writing articles, blogs,
+                      product descriptions, and website copy, which, at the same
+                      time, informs, engages, and persuades your audience. This
+                      is one of the most important for your business because if
+                      you want your business to reach new heights in the digital
+                      world, you must be online. This method further develops
+                      your bonding with your customer, a better SEO rank, and
+                      better marketing results that will lead to more
+                      conversions.
                     </p>
                   </div>
                 )}

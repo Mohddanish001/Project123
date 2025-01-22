@@ -1,6 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import InfoSection from "./InfoSection";
+import { FaLongArrowAltRight } from "react-icons/fa";
 // import TextSlider from "./TextSlider";
 
 
@@ -8,46 +9,51 @@ export const TypingContent = () => {
  
   return (
     <>
-    <div className="flex     bg-gray-100 flex-col items-center justify-center px-4 md:px-8 lg:px-16 py-32 ">
-      
-      <h1 className="text-3xl  md:text-4xl lg:text-7xl font-josefin font-bold text-black mb-6 text-center">
-        We do content writing services for
-      </h1>
+<div
+  className="flex bg-[#F7F7F7] flex-col items-center justify-center px-4 md:px-8 lg:px-16 py-32 
+             bg-[url('newbg.jpeg')]  bg-center bg-no-repeat"
+>
+  <h1 className="text-3xl md:text-4xl lg:text-7xl font-josefin font-bold text-black mb-6 text-center">
+    We do content writing services for
+  </h1>
 
-      
-      <div className="text-xl  md:text-2xl lg:text-3xl text-[#0e6938] font-medium text-center mb-6">
-        <Typewriter
-          options={{
-            strings: [
-              "SEO-friendly Content",
-              "Product Copywriting",
-              "Social Media Content",
-              "Copywriting for Ads",
-              "Ebooks & Reviews",
-            ],
-            autoStart: true,
-            loop: true,
-            delay: 30,
-            deleteSpeed: 30,
-          }}
-        />
-      </div>
+  <div className="text-xl md:text-2xl lg:text-3xl bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent font-medium text-center mb-6">
+    <Typewriter
+      options={{
+        strings: [
+          "SEO-friendly Content",
+          "Product Copywriting",
+          "Social Media Content",
+          "Copywriting for Ads",
+          "Ebooks & Reviews",
+        ],
+        autoStart: true,
+        loop: true,
+        delay: 30,
+        deleteSpeed: 30,
+      }}
+    />
+  </div>
 
-   
-      <p className="text-sm md:text-base lg:text-lg font-josefin text-black text-center mb-8 px-4 md:px-16 lg:px-32">
-      Create content for your blog, social media, website,
-      and more! with <br /> freelancers, marketing teams & agencies.      </p>
+  <p className="text-sm md:text-base lg:text-lg font-josefin text-black text-center mb-8 px-4 md:px-16 lg:px-32">
+    Create content for your blog, social media, website, and more! with <br />
+    freelancers, marketing teams & agencies.
+  </p>
 
+  <button
+  className="px-6 py-3 flex items-center justify-between gap-2 text-white font-bold text-sm md:text-base lg:text-lg rounded-full 
+             bg-gradient-to-r from-[#DB7EEC] to-[#42175B]
+             hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
+             transition-all duration-300 group"
+>
+  Get Started
+  <FaLongArrowAltRight 
+    className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+  />
+</button>
 
-      <button
-        className="px-6 py-3 text-white font-bold text-sm md:text-base lg:text-lg rounded-full 
-                   bg-gradient-to-r from-[#0e6938] via-[#1a7f3d] to-[#3a9e58] 
-                   hover:from-[#3a9e58] hover:via-[#0e6938] hover:to-[#1a7f3d] 
-                   transition-all duration-300"
-      >
-        Get Started
-      </button>
-    </div>
+</div>
+
     
     <section className="p-6 bg-black">
  
@@ -63,7 +69,7 @@ export const TypingContent = () => {
   <div className="grid grid-cols-1 gap-6 px-4 sm:px-10 md:px-16 lg:px-30 md:grid-cols-3">
   
     <div className="p-6 bg-white rounded-3xl shadow-[0_4px_15px_rgba(255,255,255,0.5)]">
-      <h2 className="text-lg md:text-xl font-josefin mb-4 text-center">1. Discovery & Strategy</h2>
+      <h2 className="text-lg md:text-xl font-josefin mb-4 text-center text-[#42175B]">1. Discovery & Strategy</h2>
       <p className="text-gray-700 font-josefin text-center">
         We begin by understanding your goals, audience, and brand voice. Through consultations and research, we develop a tailored strategy to ensure your content speaks directly to your target market.
       </p>
@@ -71,7 +77,7 @@ export const TypingContent = () => {
 
 
     <div className="p-6 bg-white rounded-3xl shadow-[0_4px_15px_rgba(255,255,255,0.5)]">
-      <h2 className="text-lg md:text-xl font-josefin mb-4 text-center">2. Expert Writing & Optimization</h2>
+      <h2 className="text-lg md:text-xl font-josefin mb-4 text-center text-[#42175B]">2. Expert Writing & Optimization</h2>
       <p className="text-gray-700 font-josefin text-center">
         Our skilled writers craft high-quality content, whether blog posts, website copy, or product descriptions. We'll make sure your content is SEO-friendly, engaging, and aligned with your business objectives.
       </p>
@@ -79,7 +85,7 @@ export const TypingContent = () => {
 
 
     <div className="p-6 bg-white rounded-3xl shadow-[0_4px_15px_rgba(255,255,255,0.5)]">
-      <h2 className="text-lg md:text-xl font-josefin mb-4 text-center">3. Review & Delivery</h2>
+      <h2 className="text-lg md:text-xl font-josefin mb-4 text-center text-[#42175B]">3. Review & Delivery</h2>
       <p className="text-gray-700 font-josefin text-center">
         Once the content is created, we review it thoroughly for accuracy, tone, and readability. After incorporating your feedback, we deliver the polished content on time and are ready to drive results.
       </p>

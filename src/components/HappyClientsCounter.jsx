@@ -9,36 +9,40 @@ const Counter = ({ targetNumber, label }) => {
         if (prevCount < targetNumber) {
           return prevCount + 1;
         }
-        clearInterval(interval); 
+        clearInterval(interval);
         return targetNumber;
       });
-    },50); 
+    }, 50);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [targetNumber]);
 
   return (
-    <div className="text-center p-6  rounded-lg shadow-md">
-      <div className="text-6xl sm:text-7xl font-bold text-[#0e6938]">{count}+</div>
-      <p className="text-xl sm:text-2xl font-josefin text-gray-600">{label}</p>
+    <div className="text-center p-6 rounded-lg  bg-white">
+      <div className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent">{count}+</div>
+      <p className="text-lg sm:text-xl lg:text-xl font-josefin text-black">{label}</p>
     </div>
   );
 };
 
 const HappyClientsCounter = () => {
   return (
-    <div className="flex items-center justify-center py-10 p-4">
-      <div className="flex gap-8 max-w-screen-xl w-full justify-center">
-        <div className="w-full sm:w-80">
+    <div className="py-10 px-4  ">
+      <div className="grid grid-cols-2  gap-6 sm:grid-cols-2 lg:grid-cols-4  max-w-screen-xl mx-auto">
+        {/* Counter 1 */}
+        <div className="w-full">
           <Counter targetNumber={27} label="Successful Projects" />
         </div>
-        <div className="w-full sm:w-80">
+        {/* Counter 2 */}
+        <div className="w-full ">
           <Counter targetNumber={6} label="Years of Experience" />
         </div>
-        <div className="w-full sm:w-80">
+        {/* Counter 3 */}
+        <div className="w-full">
           <Counter targetNumber={53} label="Happy Customers" />
         </div>
-        <div className="w-full sm:w-80">
+        {/* Counter 4 */}
+        <div className="w-full">
           <Counter targetNumber={9} label="Team Members" />
         </div>
       </div>

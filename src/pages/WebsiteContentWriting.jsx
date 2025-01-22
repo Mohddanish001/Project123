@@ -2,173 +2,70 @@ import React from "react";
 
 const WebsiteContentWriting = () => {
   return (
-    <div className="min-h-screen mt-10    py-10 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto rounded-md px-24 py-10">
+    <div className="min-h-screen py-10 px-4 sm:px-6 md:px-8">
+      <div className="max-w-7xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white shadow-md">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
           <div className="flex-1">
-            <h1 className="text-5xl font-bold  text-black mb-4">
-              Website Content Writing.
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+              Website Content Writing
             </h1>
-            <p className="text-black font-josefin text-justify text-lg">
-              Writing persuasive and precise copy for websites that engages
-              visitors and drives conversions.
+            <p className="text-black font-josefin text-justify text-base sm:text-lg">
+              Writing persuasive and precise copy for websites that engages visitors and drives conversions.
             </p>
           </div>
-          {/* <div className="flex-1">
-        <img
-          src="/public/224.png"
-          alt="SEO Content Creation"
-          className="w-full h-auto rounded-md shadow-md"
-        />
-      </div> */}
         </div>
 
-        {/* What We Offer Section */}
-        {/* <div className="mb-10">
-      <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-        What We Offer
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-gray-50 shadow-md rounded-md p-4">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Keyword Research"
-            className="w-full h-40 object-cover rounded-md mb-4"
-          />
-          <h3 className="text-xl font-semibold text-gray-800">
-            Blog Posts Optimized for SEO
-          </h3>
-          <p className="text-gray-600">
-            Developing blog posts that are best optimized for search with the practice of SEO to increase ranking and organic traffic.
-          </p>
-        </div>
-
-        <div className="bg-gray-50 shadow-md rounded-md p-4">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Website Content"
-            className="w-full h-40 object-cover rounded-md mb-4"
-          />
-          <h3 className="text-xl font-semibold text-gray-800">
-            SEO-Optimized Website Content
-          </h3>
-          <p className="text-gray-600">
-            Developing keyword-optimized website content using advanced techniques for better visibility on search engines.
-          </p>
-        </div>
-
-        <div className="bg-gray-50 shadow-md rounded-md p-4">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Meta Titles"
-            className="w-full h-40 object-cover rounded-md mb-4"
-          />
-          <h3 className="text-xl font-semibold text-gray-800">
-            Meta Titles and Descriptions
-          </h3>
-          <p className="text-gray-600">
-            Crafting engaging meta titles and descriptions to increase clicks and search rankings.
-          </p>
-        </div>
-
-        <div className="bg-gray-50 shadow-md rounded-md p-4">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Link Building"
-            className="w-full h-40 object-cover rounded-md mb-4"
-          />
-          <h3 className="text-xl font-semibold text-gray-800">
-            Content for Link-Building and Guest Posting
-          </h3>
-          <p className="text-gray-600">
-            Creating compelling content for guest posts to enhance domain authority and improve backlinks.
-          </p>
-        </div>
-      </div>
-    </div> */}
-
-        <div className="mb-10 px-10">
-          <div className="mb-6">
-            <h2 className="text-gray-600  ">
-              <span className="text-black text-xl font-bold">
-                Home Page Content:-
-              </span>
-            </h2>
-            <p>
-              Composing great and brief texts that grab and express your mark's
-              soul.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h2 className="text-gray-600 ">
-              <span className="text-black text-xl font-bold">
-                About Us Pages:-
-              </span>
-            </h2>
-            <p>
-              {" "}
-              Creating exciting stories to tell your company's history, purpose,
-              and values.{" "}
-            </p>
-          </div>
-          <div className="mb-6">
-            {" "}
-            <h2 className="text-gray-600  ">
-              <span className="text-black text-xl font-bold">
-                Service/Product Descriptions:-
-              </span>
-            </h2>
-            <p>
-              The purpose of words is to express love and attract others through
-              creativity and color. Describing the composition of the products
-              with the most impactful language is a way to present the products
-              that stimulates the customer's interest and causes them to make
-              the purchase.
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <h2 className="text-gray-600 ">
-              <span className="text-black text-xl font-bold">
-                Landing Pages:-
-              </span>
-            </h2>
-            <p>
-              Website Content Creation Content Creation Multichannel Marketing
-              Online Campaigns Digital Copywriting Social Media Content Creation
-              Marketing as e-commerce has brought various methods to reach
-              customers.
-            </p>
-          </div>
-
-          <div className="mb-6">
-            {" "}
-            <h2 className="text-gray-600">
-              <span className="text-black text-xl font-bold">FAQs:-</span>
-            </h2>
-            <p>
-              {" "}
-              Solutions to the issues that frequently have the best answers get
-              written, which makes the service a preferred one for the client
-              and enables the number of questions to be reduced.
-            </p>
-          </div>
-         
+        {/* Service Sections */}
+        <div className="mb-10 px-2 sm:px-4 md:px-8 text-justify">
+          {[
+            {
+              title: "Home Page Content",
+              description: " We write amazing home page content that not only presents your brand in an impactful way but also hooks the readers from the first sentence to the following pages. Whether it is an intricate value proposition, or a story getting people involved, visitors will accept the invitation for further adventures and perhaps become customers, with easy navigation and the hospitality factor playing a critical role.",
+            },
+            {
+              title: "About Us Pages",
+              description: " Our About Us pages are customized according to how you want your brand to be portrayed. They are a way of your brand’s story, mission, vision, and values that would nicely suit the audience of your choice. The primary goal is to establish trust, get people to feel connected, and explain your expertise and purpose. ",
+            },
+            {
+              title: "The Service/Product Descriptions",
+              description:
+                " We write comprehensive, persuasive, and SEO-friendly descriptions for your services or products. That way, you can use them to enumerate the special features, benefits, and value they have for your customers, and after choosing, they are more likely to convert. ",
+            },
+            {
+              title: "Landing Pages",
+              description:
+                " We create landing page content heavily focused on different leading causes and effects, for example, the acquisition of leads, the promotion of a product, or the collection of sign-ups for an event. The content is developed around the action and is tweaked to lure more customers while complementing your marketing campaigns. ",
+            },
+            {
+              title: "FAQs",
+              description:
+                "Our FAQs are well-structured and closely related to the problems that most customers experience. This copy enriches the user experience, develops customer confidence, and fights the customer's doubts, proactively leading the customer to the sale.",
+            },
+          ].map((service, index) => (
+            <div key={index} className="mb-6">
+              <h2 className="text-lg sm:text-xl text-black font-bold mb-2">
+                {service.title}:
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base">{service.description}</p>
+            </div>
+          ))}
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="text-center bg-[#0e6938] text-white py-8 px-4 rounded-md shadow-md">
-          <h2 className="text-3xl font-bold mb-2">
-            Grow Your Business with SEO Content
-          </h2>
-          <p className="text-lg mb-6">
-            Ready to dominate search engine results and grow your business with
-            expertly crafted SEO content? Contact us today!
-          </p>
-          <button className="bg-white text-[#0e6938] font-bold px-6 py-3 rounded-md shadow-md hover:bg-gray-100 transition">
-            Get Started Now
-          </button>
+        <div className="p-4 sm:p-6 md:p-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4  bg-gradient-to-r from-[#DB7EEC] to-[#42175B]  text-white py-6 sm:py-8 md:py-10 px-6 sm:px-10 md:px-16 lg:px-28 rounded-md shadow-md">
+            <h2 className="text-lg sm:text-2xl md:text-3xl text-center md:text-start font-josefin">
+              <span className="font-bold">Are you looking for </span>
+              <br className="hidden md:block" /> personalized assistance
+            </h2>
+            <button
+              className="mt-4 md:mt-0 bg-white  bg-gradient-to-r from-[#DB7EEC] to-[#42175B] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md hover:bg-gray-100 transitionhover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
+                   transition-all duration-300"
+            >
+              Get Started Now
+            </button>
+          </div>
         </div>
       </div>
     </div>

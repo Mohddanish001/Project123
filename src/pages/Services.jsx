@@ -35,13 +35,15 @@ function Services() {
   return (
     <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
    <div className="flex items-center justify-center mb-8 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 2xl:px-32">
+  {/* <div className="flex-1 h-[1px] w-20 sm:w-24 md:w-32 lg:w-40 bg-black"></div> */}
+  <h1 className="text-lg sm:text-xl md:text-2xl text-black font-josefin mx-4">
+    <span className="font-josefin font-bold">Our</span> Services
+    <div className="border-b px-4 border-black"></div>
+  </h1>
+  
+  {/* <div className="flex-1 h-[1px] w-20 sm:w-24 md:w-32 lg:w-40 bg-black"></div> */}
+</div>
 
-    <div className="flex-1 h-[1px] bg-black"></div>
-    <h1 className="text-lg sm:text-xl md:text-2xl text-black font-josefin mx-4">
-    <span className="font-josefin font-bold">  Our </span> Services
-    </h1>
-    <div className="flex-1 h-[1px] bg-black"></div>
-  </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <div
@@ -54,17 +56,17 @@ function Services() {
               className="w-full h-48 object-cover"
             />
             <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2 hover:text-[#0e6938] transition-colors duration-200">
+              <h3 className="text-lg font-josefin text-gray-800 mb-2 hover:text-[#0e6938] transition-colors duration-200">
                 {service.title}
               </h3>
-              <p className="text-sm text-gray-600 flex-grow">
+              <p className="text-sm font-josefin text-gray-600 flex-grow">
                 {expanded[index]
                   ? service.paragraph
                   : `${service.paragraph.split(" ").slice(0, 30).join(" ")}...`}
               </p>
               <button
                 onClick={() => toggleExpand(index)}
-                className="mt-4 text-sm font-bold text-[#0e6938] hover:text-green-700"
+                className="mt-4 text-sm font-bold bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent"
               >
                 {expanded[index] ? "Show Less" : "Read More"}
               </button>

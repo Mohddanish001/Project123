@@ -31,7 +31,7 @@ export const About = () => {
                   className="flex items-center gap-2 text-base sm:text-md md:text-md lg:text-md mb-2"
                 >
                   <span>
-                    <TiTick className="border border-[#0e6938] bg-[#0e6938] h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white rounded-full" />
+                    <TiTick className="border border-[#42175B] bg-gradient-to-r from-[#DB7EEC] to-[#42175B]  h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white rounded-full" />
                   </span>
                   {text}
                 </h1>
@@ -49,9 +49,9 @@ export const About = () => {
             <h1 className="text-xl font-bold mb-2">About Us</h1>
             <h2 className="text-5xl font-bold mb-4">
               We Create{" "}
-              <span className="border-[#0e6938] text-[#0e6938]">Amazing</span>{" "}
+              <span className="bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent">Amazing</span>{" "}
               Content
-              <span className="text-[#0e6938]">!</span>
+              <span className="bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent">!</span>
             </h2>
             {/* Add Text Content */}
             <p className="text-gray-700 mb-4">
@@ -102,7 +102,7 @@ export const About = () => {
                 className="bg-white shadow-md p-6 rounded-md relative"
                 data-aos="zoom-in"
               >
-                <span className="absolute top-3 -left-3 border border-[#0e6938] p-2 bg-[#0e6938] text-white">
+                <span className="absolute top-3 -left-3 border border-[#42175B] p-2 bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white">
                   {index + 1}
                 </span>
                 <h4 className="text-2xl font-bold mb-2">{title}</h4>
