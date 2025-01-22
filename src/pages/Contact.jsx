@@ -25,7 +25,7 @@ export const Contact = () => {
 
     try {
       const response = await axios.post(
-        "https://apiig.fourbrick.in/contact",
+        "https://apiwt.fourbrick.in/contact",
         formData, // Data to be sent in JSON format
         {
           headers: {
