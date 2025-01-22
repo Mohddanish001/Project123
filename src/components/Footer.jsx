@@ -178,7 +178,7 @@ export const Footer = () => {
               />
               <div>
                 <a
-                  href="/blog/how-to-write-seo-content"
+                  href="/blogs"
                   className="block text-gray-200 hover:text-gray-400 font-medium font-josefin"
                 >
                   Polls and Quizzes
@@ -198,7 +198,7 @@ export const Footer = () => {
               />
               <div>
                 <a
-                  href="/blog/content-marketing-strategies"
+                  href="/blogs"
                   className="block text-gray-200 hover:text-gray-400 font-medium font-josefin"
                 >
                   Behind-the-Scenes Content
@@ -218,7 +218,7 @@ export const Footer = () => {
               />
               <div>
                 <a
-                  href="/blog/social-media-tips"
+                  href="/blogs"
                   className="block text-gray-200 hover:text-gray-400 font-medium font-josefin"
                 >
                   User Generated Content (UGC)
