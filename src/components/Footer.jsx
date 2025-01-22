@@ -146,6 +146,22 @@ export const Footer = () => {
                 Copywriting for Ads
               </a>
             </li>
+            <li>
+              <a
+                href="/product-descriptions"
+                className="text-gray-400 font-josefin"
+              >
+               Product Descriptions
+              </a>
+            </li>
+            <li>
+              <a
+                href="/email-marketing-copy"
+                className="text-gray-400 font-josefin"
+              >
+              Eamil Copywriting
+              </a>
+            </li>
           </ul>
         </div>
         <div>

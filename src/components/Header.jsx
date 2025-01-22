@@ -54,6 +54,11 @@ export const Header = () => {
     };
   }, []);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);  // Close mobile menu
+    setIsServicesOpen(false);  // Close services dropdown
+  };
+
   return (
     <nav className="bg-white font-josefin w-full fixed top-0 z-50 shadow-md transition-all">
       <div className="px-4 md:px-20">
@@ -70,12 +75,14 @@ export const Header = () => {
             <Link
               to="/"
               className="text-black font-josefin text-xl hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
+              onClick={handleLinkClick}  // Close menu and dropdown when clicked
             >
               Home
             </Link>
             <Link
               to="/about"
               className="text-black font-josefin text-xl hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
+              onClick={handleLinkClick}  // Close menu and dropdown when clicked
             >
               About Us
             </Link>
@@ -110,6 +117,7 @@ export const Header = () => {
                             .toLowerCase()
                             .replace(/ /g, "-")}`}
                           className="flex items-center font-josefin text-black"
+                          onClick={handleLinkClick}  // Close menu and dropdown when clicked
                         >
                           <span className="mr-2">{service.icon}</span>
                           {service.name}
@@ -123,20 +131,29 @@ export const Header = () => {
             <Link
               to="/blogs"
               className="text-black font-josefin text-xl hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
+              onClick={handleLinkClick}  // Close menu and dropdown when clicked
             >
               Blog
             </Link>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
-            >
-              Free Consulting
-            </Link>
+            <li className="list-none">
+              <a
+                href="/contact"
+                className="block list-none bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleLinkClick}  // Close menu and dropdown when clicked
+              >
+                Free Consulting
+              </a>
+            </li>
           </div>
 
           {/* Mobile Hamburger Menu */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+              setIsServicesOpen(false); // Close services dropdown when hamburger is clicked
+            }}
             className="md:hidden text-gray-700 focus:outline-none"
           >
             <svg
@@ -150,11 +167,7 @@ export const Header = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d={
-                  isMenuOpen
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
-                }
+                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
               />
             </svg>
           </button>
@@ -168,7 +181,7 @@ export const Header = () => {
                 <Link
                   to="/"
                   className="block font-josefin text-black hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleLinkClick}  // Close menu and dropdown when clicked
                 >
                   Home
                 </Link>
@@ -177,7 +190,7 @@ export const Header = () => {
                 <Link
                   to="/about"
                   className="block font-josefin text-black hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleLinkClick}  // Close menu and dropdown when clicked
                 >
                   About Us
                 </Link>
@@ -213,7 +226,7 @@ export const Header = () => {
                               .toLowerCase()
                               .replace(/ /g, "-")}`}
                             className="flex font-josefin items-center text-black"
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={handleLinkClick}  // Close menu and dropdown when clicked
                           >
                             <span className="mr-2">{service.icon}</span>
                             {service.name}
@@ -228,19 +241,21 @@ export const Header = () => {
                 <Link
                   to="/blogs"
                   className="block font-josefin text-black hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleLinkClick}  // Close menu and dropdown when clicked
                 >
                   Blog
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/contact"
+                <a
+                  href="/contact"
                   className="block bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
-                  onClick={() => setIsMenuOpen(false)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleLinkClick}  // Close menu and dropdown when clicked
                 >
                   Free Consulting
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

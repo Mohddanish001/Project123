@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const CopyWriting = () => {
   return (
     <div className="min-h-screen py-10 px-4 sm:px-6 md:px-8 lg:px-12">
@@ -59,6 +60,8 @@ const CopyWriting = () => {
               <span className="font-bold">Are you looking for </span>
               <br className="hidden md:block" /> personalized assistance
             </h2>
+            <Link
+                  to="/contact">
             <button
   className="mt-4 flex items-center justify-between gap-2 md:mt-0 bg-white bg-gradient-to-r from-[#DB7EEC] to-[#42175B] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md 
              hover:bg-gray-100 hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
@@ -69,6 +72,7 @@ const CopyWriting = () => {
     className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
   />
 </button>
+</Link>
 
             
           </div>

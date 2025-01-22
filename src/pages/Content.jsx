@@ -22,6 +22,7 @@ import { TypingContent } from "../components/TypingContent";
 import GoogleReviews from "../components/GoogleReviews";
 import HappyClientsCounter from "../components/HappyClientsCounter";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Content() {
   const [leftRef, leftInView] = useInView({ threshold: 0.2 });
@@ -69,6 +70,8 @@ export default function Content() {
               <span className="font-bold">Are you looking for </span>
               <br className="hidden md:block" /> personalized assistance
             </h2>
+            <Link
+                  to="/contact">
             <button
               className="mt-4 flex justify-between items-center gap-2 md:mt-0 bg-white bg-gradient-to-r from-[#DB7EEC] to-[#42175B] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md
              hover:bg-gray-100 hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
@@ -77,6 +80,7 @@ export default function Content() {
               Get Started Now
               <FaLongArrowAltRight className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
             </button>
+            </Link>
           </div>
         </div>
         <div className="container shadow-xl border rounded-lg p-2  mx-auto md:flex md:items-center md:space-x-12">
@@ -410,7 +414,7 @@ const WebUI = () => {
             <div className="space-y-4">
               <div className="border-b px-4  border-gray-300">
                 <button
-                  className="w-full text-left font-josefin text-black py-2 focus:outline-none"
+                  className="w-full text-left text-lg font-josefin text-black py-2 focus:outline-none"
                   onClick={() => toggleAccordion(0)}
                 >
                   How can high-quality content help improve Your online
@@ -418,7 +422,7 @@ const WebUI = () => {
                 </button>
                 {openIndex === 0 && (
                   <div className="mt-2">
-                    <p>
+                    <p className="font-josefin text-gray-600">
                       The optimal content of the highest quality increases the
                       effectiveness of your online presence by persuading your
                       audience, gaining their trust, and growing the website's
@@ -433,14 +437,14 @@ const WebUI = () => {
 
               <div className="border-b px-4  border-gray-300">
                 <button
-                  className="w-full text-left font-josefin py-2 focus:outline-none"
+                  className="w-full text-left text-lg font-josefin py-2 focus:outline-none"
                   onClick={() => toggleAccordion(1)}
                 >
                   Can you help with keyword research and integration?
                 </button>
                 {openIndex === 1 && (
                   <div className="mt-2">
-                    <p>
+                    <p className="font-josefin text-gray-600">
                       Yeah, sure, we can do a lot of things, including excellent
                       keyword research and integration. Observe the positions of
                       these keywords in your articles, how you present yourself,
@@ -453,14 +457,14 @@ const WebUI = () => {
 
               <div className="border-b px-4 border-gray-300">
                 <button
-                  className="w-full text-left font-josefin py-2 focus:outline-none"
+                  className="w-full text-left text-lg font-josefin py-2 focus:outline-none"
                   onClick={() => toggleAccordion(2)}
                 >
                   Do you provide content for social media or email campaigns
                 </button>
                 {openIndex === 2 && (
                   <div className="mt-2">
-                    <p>
+                    <p className="font-josefin text-gray-600">
                       Absolutely! We create content articles for different
                       social media messages and e-mail strategies. We create
                       eye-catching content for Facebook, Twitter, LinkedIn, and
@@ -472,14 +476,14 @@ const WebUI = () => {
               </div>
               <div className="border-b px-4 border-gray-300">
                 <button
-                  className="w-full text-left font-josefin py-2 focus:outline-none"
-                  onClick={() => toggleAccordion(1)}
+                  className="w-full text-left text-lg font-josefin py-2 focus:outline-none"
+                  onClick={() => toggleAccordion(3)}
                 >
                   Do you have professional editors to review the content?
                 </button>
                 {openIndex === 3 && (
                   <div className="mt-2">
-                    <p>
+                    <p className="font-josefin text-gray-600">
                       Of course, we have a team of experienced editors who
                       carefully review articles, correct grammar and spelling
                       mistakes, and make the articles more comprehensible,
@@ -494,17 +498,17 @@ const WebUI = () => {
                   </div>
                 )}
               </div>
-              <div className="border-b px-4 border-gray-300">
+              <div className=" px-4 ">
                 <button
-                  className="w-full text-left font-josefin py-2 focus:outline-none"
-                  onClick={() => toggleAccordion(1)}
+                  className="w-full text-left text-lg font-josefin py-2 focus:outline-none"
+                  onClick={() => toggleAccordion(4)}
                 >
                   What is content writing, and why is it important for my
                   business?
                 </button>
                 {openIndex === 4 && (
                   <div className="mt-2">
-                    <p>
+                    <p className="font-josefin text-gray-600">
                       Writing content is concerned with writing articles, blogs,
                       product descriptions, and website copy, which, at the same
                       time, informs, engages, and persuades your audience. This

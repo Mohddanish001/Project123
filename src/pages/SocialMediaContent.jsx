@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SocialMediaContent = () => {
   return (
@@ -56,12 +57,15 @@ const SocialMediaContent = () => {
               <span className="font-bold">Are you looking for </span>
               <br className="hidden md:block" /> personalized assistance
             </h2>
+            <Link
+                  to="/contact">
             <button
               className="mt-4 md:mt-0 bg-white  bg-gradient-to-r from-[#DB7EEC] to-[#42175B] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md hover:bg-gray-100 transitionhover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
                    transition-all duration-300"
             >
               Get Started Now
             </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SEOContentCreation = () => {
   return (
@@ -7,7 +8,7 @@ const SEOContentCreation = () => {
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
           <div className="flex-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+            <h1 className="text-3xl font-josefin sm:text-4xl md:text-5xl font-bold text-black mb-4">
               SEO-friendly Content Writing
             </h1>
             <p className="text-black font-josefin text-justify text-base sm:text-lg">
@@ -49,10 +50,10 @@ const SEOContentCreation = () => {
             },
           ].map((service, index) => (
             <div key={index} className="mb-6">
-              <h2 className="text-lg sm:text-xl text-black font-bold mb-2">
+              <h2 className="text-lg font-josefin sm:text-xl text-black font-bold mb-2">
                 {service.title}:
               </h2>
-              <p className="text-gray-600 text-sm sm:text-base">
+              <p className="text-gray-600 font-josefin text-sm sm:text-base">
                 {service.description}
               </p>
             </div>
@@ -61,16 +62,22 @@ const SEOContentCreation = () => {
 
         {/* Call-to-Action Section */}
         <div className="text-center  bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white py-8 px-4 rounded-md shadow-md">
-          <h2 className="text-3xl font-bold mb-2">
+          <h2 className="text-3xl font-josefin font-bold mb-2">
             Grow Your Business with SEO Content
           </h2>
-          <p className="text-lg mb-6">
+          <p className="text-lg mb-6 font-josefin">
             Ready to dominate search engine results and grow your business with
             expertly crafted SEO content? Contact us today!
           </p>
-          <button className="bg-white text-[#0e6938] font-bold px-6 py-3 rounded-md shadow-md hover:bg-gray-100 transition">
+          <Link
+                  to="/contact">
+          <button className=" font-bold px-6 py-3 rounded-md shadow-md hover:bg-gray-100 
+           bg-gradient-to-r from-[#DB7EEC] to-[#42175B]
+   hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
+   transition-all duration-300 group">
             Get Started Now
           </button>
+          </Link>
         </div>
       </div>
     </div>

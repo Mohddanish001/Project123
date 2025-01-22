@@ -133,20 +133,20 @@ export const Contact = () => {
                 Sector - 02, Noida Uttar Pradesh - 201301 India
               </p>
               <p className="text-black mb-2 font-josefin flex items-center gap-2">
-                            {/* Phone Icon */}
-                            <FaPhoneAlt />
-                            +91 84485 74664
-                          </p>
+                {/* Phone Icon */}
+                <FaPhoneAlt />
+                +91 84485 74664
+              </p>
               <p className="text-black font-josefin  flex items-center gap-2">
-                            {/* Email Icon */}
-                            <FaEnvelope />
-                            <a
-                              href="mailto:info@quillwhale.com"
-                              className="text-black hover:text-gray-300 font-josefin"
-                            >
-                              info@quillwhale.com
-                            </a>
-                          </p>
+                {/* Email Icon */}
+                <FaEnvelope />
+                <a
+                  href="mailto:info@quillwhale.com"
+                  className="text-black hover:text-gray-300 font-josefin"
+                >
+                  info@quillwhale.com
+                </a>
+              </p>
               {/* <p>
                 <span className="font-bold">Email:</span>{" "}
                 <a
