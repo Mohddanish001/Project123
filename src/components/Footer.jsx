@@ -107,6 +107,11 @@ export const Footer = () => {
                 Contact Us
               </a>
             </li>
+            <li>
+              <a href="privacy-policy" className="text-gray-400 font-josefin">
+                Privacy Policy
+              </a>
+            </li>
           </ul>
         </div>
         <div>

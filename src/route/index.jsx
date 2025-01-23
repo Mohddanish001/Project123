@@ -17,6 +17,7 @@ import EmailMarketing from "../pages/EmailMarketing";
 import GhostWriting from "../pages/GhostWriting";
 import ContentEditing from "../pages/ContentEditing";
 import Script from "../pages/Script";
+import PrivacyPolicy from "../components/PrivacyPolicy";
 
 const router = createBrowserRouter([
   {
@@ -86,6 +87,10 @@ const router = createBrowserRouter([
       {
         path: "script-&-content-marketing",
         element: <Script/>,
+      },
+      {
+        path: "privacy-policy",
+        element: <PrivacyPolicy/>,
       },
     ],
   },
