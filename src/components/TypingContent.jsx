@@ -10,7 +10,7 @@ export const TypingContent = () => {
     <>
       <div
         className="flex bg-[#F7F7F7] flex-col items-center justify-center px-4 md:px-8 lg:px-16 py-32 
-             bg-[url('newbg.jpeg')]  bg-center bg-no-repeat"
+             bg-[url('/newbg.jpg')]  bg-center bg-no-repeat"
       >
         <h1 className="text-3xl md:text-4xl lg:text-7xl font-josefin font-bold text-black mb-6 text-center">
           We do content writing services for
