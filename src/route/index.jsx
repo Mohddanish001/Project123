@@ -45,7 +45,7 @@ const router = createBrowserRouter([
         element: <ContentCreation />,
       },
       {
-        path: "/Social-Media-Content",
+        path: "/social-media-content-writing",
         element: <SocialMediaContent />,
       },
       {
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         element: <SEOContentCreation />,
       },
       {
-        path: "blog-&-articles-writing",
+        path: "/best-blog-writing-services",
         element: <BlogAndArticle />,
       },
       {
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
         element: <ProductDescription/>,
       },
       {
-        path: "email-marketing-copy",
+        path: "/email-marketing-content-marketing",
         element: <EmailMarketing/>,
       },
       {

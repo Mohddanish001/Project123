@@ -10,6 +10,7 @@ import {
   FaPinterestP,
 } from "react-icons/fa";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   // const [email, setEmail] = useState("");
@@ -45,11 +46,14 @@ export const Footer = () => {
       <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:text-left">
         {/* Connect With Us */}
         <div>
+          <Link
+              to="/">
           <img
             className="w-32 md:w-40 mx-auto mb-6"
             src="logos.png"
             alt="Company Logo"
           />
+          </Link>
           <p className="text-gray-400 mb-6 font-josefin">
             Welcome to QuillWhale, your go-to hub for creative content and
             digital marketing solutions. As content experts, we provide a full
@@ -112,6 +116,17 @@ export const Footer = () => {
                 Privacy Policy
               </a>
             </li>
+            <li>
+            <a
+                  href="https://qiconindia.com/"
+                  className="text-gray-400 font-josefin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                   
+                > 
+                  Our Partners
+                </a>
+            </li>
           </ul>
         </div>
         <div>
@@ -167,6 +182,7 @@ export const Footer = () => {
               Eamil Copywriting
               </a>
             </li>
+           
           </ul>
         </div>
         <div>
@@ -273,16 +289,24 @@ export const Footer = () => {
           &copy; {new Date().getFullYear()} QuillWhale. All Rights Reserved.
         </p>
         <div className="flex justify-center space-x-6 text-xl">
-          <a href="#" className="hover:text-gray-400">
+          {/* <a href="#" className="hover:text-gray-400">
             <FaFacebookF className="text-blue-600 hover:text-gray-400" />
+          </a> */}
+          <a 
+           href="https://www.linkedin.com/company/writeoutq/"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="hover:text-gray-400">
+            <FaLinkedinIn className="hover:text-blue-700 text-gray-400" />
           </a>
-          <a href="#" className="hover:text-gray-400">
-            <FaLinkedinIn className="text-blue-700 hover:text-gray-400" />
-          </a>
-          <a href="#" className="hover:text-gray-400">
-            <FaInstagram className="text-pink-500 hover:text-gray-400" />
-          </a>
-          <a href="#" className="hover:text-gray-400">
+          {/* <a 
+            href="https://qiconindia.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+           className="hover:text-gray-400">
+            <FaInstagram className="text-gray-400  hover:text-pink-500" />
+          </a> */}
+          {/* <a href="#" className="hover:text-gray-400">
             <FaTwitter className="text-blue-500 hover:text-gray-400" />
           </a>
           <a href="#" className="hover:text-gray-400">
@@ -290,7 +314,7 @@ export const Footer = () => {
           </a>
           <a href="#" className="hover:text-gray-400">
             <FaPinterestP className="text-red-700 hover:text-gray-400" />
-          </a>
+          </a> */}
         </div>
       </div>
     </footer>

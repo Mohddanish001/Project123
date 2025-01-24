@@ -8,10 +8,10 @@ const GhostWriting = () => {
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
           <div className="flex-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+            <h1 className="text-3xl font-josefin sm:text-4xl md:text-5xl font-bold text-black mb-4">
               Ghostwriting
             </h1>
-            <p className="text-black text-base sm:text-lg text-justify">
+            <p className="text-black font-josefin text-base sm:text-lg text-justify">
               Crafting compelling content for individuals or brands who wish to
               publish under their name without writing it themselves.
             </p>
@@ -19,7 +19,7 @@ const GhostWriting = () => {
         </div>
 
         {/* Services Section */}
-        <div className="mb-10 px-2 sm:px-4 md:px-8 text-justify">
+        <div className="mb-10 px-2 sm:px-4 md:px-8 ">
           {[
             {
               title: "Biographies",
@@ -43,10 +43,10 @@ const GhostWriting = () => {
             },
           ].map((service, index) => (
             <div key={index} className="mb-6">
-              <h2 className="text-lg sm:text-xl text-black font-bold mb-2">
+              <h2 className="text-lg font-josefin sm:text-xl text-black font-bold mb-2">
                 {service.title}:
               </h2>
-              <p className="text-gray-600 text-sm sm:text-base">
+              <p className="text-gray-600 font-josefin text-justify text-sm sm:text-base">
                 {service.description}
               </p>
             </div>
@@ -63,7 +63,7 @@ const GhostWriting = () => {
             <Link
                   to="/contact">
             <button
-              className="mt-4 md:mt-0 bg-white  bg-gradient-to-r from-[#DB7EEC] to-[#42175B] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md hover:bg-gray-100 transitionhover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
+              className="mt-4 md:mt-0 bg-white font-josefin   bg-gradient-to-r from-[#DB7EEC] to-[#42175B] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md hover:bg-gray-100 transitionhover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
                    transition-all duration-300"
             >
               Get Started Now

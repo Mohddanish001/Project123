@@ -8,13 +8,13 @@ export const Header = () => {
   const servicesRef = useRef(null); // Ref for dropdown container
 
   const contentWritingServices = [
-    { name: "SEO-friendly Content Writing", icon: "📈" },
-    { name: "Blog & Articles Writing", icon: "✍️" },
+    { name: "SEO-friendly Content Writing", icon: "📈" },	
+    { name: "Blog & Articles Writing", icon: "✍️", url: "best-blog-writing-services	" },
     { name: "Website Content Writing", icon: "🌐" },
     { name: "Copywriting for Ads", icon: "📢" },
     { name: "Product Descriptions", icon: "🛒" },
-    { name: "Social Media Content", icon: "📱" },
-    { name: "Email Marketing Copy", icon: "📧" },
+    { name: "Social Media Content", icon: "📱", url: "social-media-content-writing"  },
+    { name: "Email Marketing Copy", icon: "📧" , url: "email-marketing-content-marketing" },	
     { name: "Press Releases", icon: "📰" },
     { name: "Ghostwriting", icon: "👻" },
     { name: "Content Editing & Error-free", icon: "✅" },
@@ -108,25 +108,24 @@ export const Header = () => {
                 </svg>
               </button>
               {isServicesOpen && (
-                <div className="absolute top-full bg-white border shadow-lg rounded-lg w-72">
-                  <ul className="py-4">
-                    {contentWritingServices.map((service, index) => (
-                      <li key={index} className="px-4 py-2 hover:bg-gray-100">
-                        <Link
-                          to={`/${service.name
-                            .toLowerCase()
-                            .replace(/ /g, "-")}`}
-                          className="flex items-center font-josefin text-black"
-                          onClick={handleLinkClick}  // Close menu and dropdown when clicked
-                        >
-                          <span className="mr-2">{service.icon}</span>
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+  <div className="absolute top-full bg-white border shadow-lg rounded-lg w-72">
+    <ul className="py-4">
+      {contentWritingServices.map((service, index) => (
+        <li key={index} className="px-4 py-2 hover:bg-gray-100">
+          <Link
+            to={`/${service.url || service.name.toLowerCase().replace(/ /g, "-")}`}
+            className="flex items-center font-josefin text-black"
+            onClick={handleLinkClick}
+          >
+            <span className="mr-2">{service.icon}</span>
+            {service.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
             </div>
             <Link
               to="/blogs"
@@ -249,10 +248,10 @@ export const Header = () => {
               <li>
                 <a
                   href="/contact"
-                  className="block bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
+                  className="block bg-gradient-to-r  lg:w-auto from-[#DB7EEC] to-[#42175B] text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={handleLinkClick}  // Close menu and dropdown when clicked
+                  onClick={handleLinkClick}  
                 >
                   Free Consulting
                 </a>

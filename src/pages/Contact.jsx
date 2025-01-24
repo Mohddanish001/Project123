@@ -9,6 +9,8 @@ export const Contact = () => {
     contact: "",
     requirement: "",
   });
+  const [success, setSuccess] = useState(null); 
+  const [loading, setLoading] = useState(false);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -22,6 +24,7 @@ export const Contact = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await axios.post(
@@ -42,9 +45,17 @@ export const Contact = () => {
         contact: "",
         requirement: "",
       });
+      if (response.ok) {
+        setSuccess(true); // Set success to true
+      } else {
+        setSuccess(false); // Set success to false on failure
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
-    }
+      setSuccess(false);
+    }finally {
+      setLoading(false);
+        }
   };
 
   const backgroundImage = "contact.jpg";
@@ -56,6 +67,7 @@ export const Contact = () => {
       ></div>
 
       <div className="p-8 bg-gray-100">
+        
         <div className="flex flex-wrap lg:flex-nowrap">
           <form
             onSubmit={handleSubmit}
@@ -119,11 +131,23 @@ export const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full sm:w-20  bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
+              className="w-40  bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
                    transition-all duration-300 "
+                   disabled={loading}
             >
-              Submit
+          {loading ? "Sending..." : "Send Message"}
             </button>
+            {success === true && (
+  <p className="text-green-600 mt-4">
+    Thank you for contacting us! Our team will contact you shortly.
+  </p>
+)}
+{success === false && (
+  <p className="text-red-600 mt-4">
+    Failed to send message. Please try again.
+  </p>
+)}
+
           </form>
           <div className="w-full lg:w-1/2 flex flex-col justify-between  lg:mt-0">
             <div></div>

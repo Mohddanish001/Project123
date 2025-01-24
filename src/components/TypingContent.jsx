@@ -3,6 +3,7 @@ import Typewriter from "typewriter-effect";
 import InfoSection from "./InfoSection";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SliderComponent from "./SliderComponent";
 // import TextSlider from "./TextSlider";
 
 export const TypingContent = () => {
@@ -53,17 +54,17 @@ export const TypingContent = () => {
         </Link>
       </div>
 
-      <section className="p-6 bg-black">
+      <section className="lg:px-20 bg-black">
         <div className="flex items-center justify-center mb-8 px-4 md:px-12 lg:px-40">
-          <div className="flex-1 h-[1px] bg-white"></div>
-          <h1 className="text-lg md:text-xl lg:text-2xl text-white font-josefin mx-4 text-center">
+                    <div className="flex-1 h-[1px] mt-4 bg-white"></div>
+          <h1 className="text-lg md:text-xl mt-4 -10 lg:text-2xl text-white font-josefin mx-4 text-center">
             Our{" "}
-            <span className="font-bold text-xl md:text-2xl lg:text-3xl">
+            <span className="font-bold mt-4 text-xl md:text-2xl lg:text-3xl">
               3-Step
             </span>{" "}
             Content Writing Process
           </h1>
-          <div className="flex-1 h-[1px] bg-white"></div>
+          <div className="flex-1 mt-4 h-[1px] bg-white"></div>
         </div>
 
         <div className="grid grid-cols-1 gap-6 px-4 sm:px-10 md:px-16 lg:px-30 md:grid-cols-3">
@@ -116,7 +117,7 @@ export const TypingContent = () => {
           />
         </div>
       </section>
-
+<SliderComponent />
       <InfoSection />
     </>
   );

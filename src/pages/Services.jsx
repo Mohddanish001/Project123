@@ -33,13 +33,13 @@ function Services() {
   };
 
   return (
-    <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className=" px-4 sm:px-6 lg:px-20">
    <div className="flex items-center justify-center mb-8 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 2xl:px-32">
   {/* <div className="flex-1 h-[1px] w-20 sm:w-24 md:w-32 lg:w-40 bg-black"></div> */}
-  <h1 className="text-lg sm:text-xl md:text-2xl text-black font-josefin mx-4">
-    <span className="font-josefin font-bold">Our</span> Services
-    <div className="border-b px-4 border-black"></div>
-  </h1>
+    {/* <h1 className="text-lg sm:text-xl md:text-2xl text-black font-josefin mx-4">
+      <span className="font-josefin font-bold">Our</span> Services
+      <div className="border-b px-4 border-black"></div>
+    </h1> */}
   
   {/* <div className="flex-1 h-[1px] w-20 sm:w-24 md:w-32 lg:w-40 bg-black"></div> */}
 </div>

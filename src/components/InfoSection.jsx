@@ -9,11 +9,11 @@ const InfoSection = () => {
 
   return (
     <div
-      className="container mx-auto px-4 py-8 bg-cover bg-center"
+      className="container mx-auto py-8 bg-cover bg-center"
       style={{ backgroundImage: "url('pettern-bg2.png')" }}
     >
       {/* Navigation Bar */}
-      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 rounded-full text-black py-4 px-6">
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 rounded-full text-black py-4 ">
         {["Hire Article Experts", "Content Marketing", "Article Experts"].map(
           (section) => (
             <span

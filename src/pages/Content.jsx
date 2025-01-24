@@ -17,7 +17,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 // import BlogSection from "./BlogSection";
 import Services from "./Services";
-import TextSlider from "../components/TextSlider";
+// import TextSlider from "../components/TextSlider";
 import { TypingContent } from "../components/TypingContent";
 import GoogleReviews from "../components/GoogleReviews";
 import HappyClientsCounter from "../components/HappyClientsCounter";
@@ -83,7 +83,7 @@ export default function Content() {
             </Link>
           </div>
         </div>
-        <div className="container shadow-xl border rounded-lg p-2  mx-auto md:flex md:items-center md:space-x-12">
+        <div className="container lg:px-20 p-2  mx-auto md:flex md:items-center md:space-x-12">
           <motion.div
             ref={leftRef}
             className="md:w-1/2 w-full"
@@ -264,8 +264,8 @@ const OurServices = () => {
         </div>
 
         {/* Hero Section */}
-        <div className="p-10">
-          <div className="flex flex-col  md:flex-row shadow-xl border rounded-2xl  items-center   justify-between gap-6 px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-50 py-6 sm:py-8 md:py-10 lg:py-12">
+        <div className="">
+          <div className="flex flex-col  md:flex-row  items-center   justify-between gap-6 px-4 sm:px-6 md:px-8 lg:px-20 py-6 sm:py-8 md:py-10 lg:py-12">
             <div className="md:w-1/2 text-center  md:text-left ">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-josefin text-gray-800">
                 Content{" "}
@@ -401,7 +401,7 @@ const WebUI = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-4 sm:px-10">
           <div className="flex justify-center items-center">
             <img
-              src="third.png"
+              src="faq.png"
               alt="Earth"
               className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-contain"
             />

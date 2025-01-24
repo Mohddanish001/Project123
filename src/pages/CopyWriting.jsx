@@ -6,12 +6,12 @@ const CopyWriting = () => {
     <div className="min-h-screen py-10 px-4 sm:px-6 md:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white shadow-md">
         {/* Hero Section */}
-        <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
+        <div className="flex flex-col mt-10 md:flex-row items-center gap-8 mb-10">
           <div className="flex-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+            <h1 className="text-3xl sm:text-4xl font-josefin md:text-5xl font-bold text-black mb-4">
               Copywriting for Ads.
             </h1>
-            <p className="text-black text-base sm:text-lg text-justify">
+            <p className="text-black text-base sm:text-lg font-josefin text-justify">
               Writing attention-grabbing ad copy for both online and offline
               advertising platforms.
             </p>
@@ -43,10 +43,10 @@ const CopyWriting = () => {
             },
           ].map((service, index) => (
             <div key={index} className="mb-6">
-              <h2 className="text-lg sm:text-xl text-black font-bold mb-2">
+              <h2 className="text-lg sm:text-xl  text-left text-black font-josefin mb-2">
                 {service.title}:
               </h2>
-              <p className="text-gray-600 text-sm sm:text-base">
+              <p className="text-gray-600 font-josefin text-sm sm:text-base">
                 {service.description}
               </p>
             </div>
@@ -55,15 +55,15 @@ const CopyWriting = () => {
 
         {/* Call-to-Action Section */}
         <div className="p-4 sm:p-6 md:p-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4  bg-gradient-to-r from-[#DB7EEC] to-[#42175B]  text-white py-6 sm:py-8 md:py-10 px-6 sm:px-10 md:px-16 lg:px-28 rounded-md shadow-md">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4=  bg-gradient-to-r from-[#DB7EEC] to-[#42175B]  text-white py-6 sm:py-8 md:py-10 px-6 sm:px-10 md:px-16 lg:px-28 rounded-md shadow-md">
             <h2 className="text-lg sm:text-2xl md:text-3xl text-center md:text-start font-josefin">
-              <span className="font-bold">Are you looking for </span>
-              <br className="hidden md:block" /> personalized assistance
+              <span className="font-bold font-josefin">Are you looking for </span>
+              <br className="hidden md:block font-josefin" /> personalized assistance
             </h2>
             <Link
                   to="/contact">
             <button
-  className="mt-4 flex items-center justify-between gap-2 md:mt-0 bg-white bg-gradient-to-r from-[#DB7EEC] to-[#42175B] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md 
+  className="mt-4 flex  font-josefin items-center justify-between gap-2 md:mt-0 bg-white bg-gradient-to-r from-[#DB7EEC] to-[#42175B] font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-md 
              hover:bg-gray-100 hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
              transition-all duration-300 group"
 >
@@ -72,10 +72,8 @@ const CopyWriting = () => {
     className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
   />
 </button>
-</Link>
-
-            
-          </div>
+</Link>     
+          </div>  
         </div>
       </div>
     </div>

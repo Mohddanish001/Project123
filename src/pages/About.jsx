@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import axios from "axios";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const About = () => {
   const [formData, setFormData] = useState({
@@ -56,40 +57,53 @@ export const About = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen mt-20">
+    <header className="relative h-[60vh] md:h-80 text-white">
+  {/* Video Background */}
+  <video
+    autoPlay
+    loop
+    muted
+    className="absolute inset-0 w-full h-full object-cover opacity-50"
+  >
+    <source
+      src="3255275-uhd_3840_2160_25fps.mp4"
+      type="video/mp4"
+    />
+  </video>
+
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
+
+  {/* Content */}
+  <div className="relative z-10 text-center flex flex-col justify-center items-center h-full px-4">
+    <p className="text-xl md:text-2xl lg:text-4xl uppercase font-josefin text-black">
+      Who We Are
+    </p>
+    <h1 className="text-4xl md:text-6xl lg:text-9xl mt-4 md:mt-6 font-josefin text-black">
+      ABOUT US
+    </h1>
+    <div className="flex justify-center items-center mt-6 md:mt-10 space-x-2">
+      <Link
+        to="/"
+        className="hover:underline font-josefin text-black hover:text-white cursor-pointer no-underline text-sm md:text-base"
+      >
+        Home
+      </Link>
+      <span className="text-black text-sm md:text-base">&gt;</span>
+      <Link
+        to="/about"
+        className="hover:underline font-josefin text-black hover:text-white cursor-pointer no-underline text-sm md:text-base"
+      >
+        About
+      </Link>
+    </div>
+  </div>
+</header>
+
       <div className="container mx-auto px-4 py-10">
         <div className="flex flex-col md:flex-row gap-8 p-4">
-          <div className="flex flex-col md:w-1/2 gap-8" data-aos="fade-down">
-            <div>
-              <img src="about1.png" alt="Illustration" className="w-full" />
-            </div>
-            <div className="px-4 md:px-10">
-              {/* Points */}
-              {[
-                "We Create Premium Quality Content",
-                "We Focus on Client’s Needs and Satisfaction",
-                "We Deliver On Time",
-              ].map((text, index) => (
-                <h1
-                  key={index}
-                  className="flex items-center gap-2 text-base sm:text-md md:text-md lg:text-md mb-2"
-                >
-                  <span>
-                    <TiTick className="border border-[#42175B] bg-gradient-to-r from-[#DB7EEC] to-[#42175B]  h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white rounded-full" />
-                  </span>
-                  {text}
-                </h1>
-              ))}
-              <div className="mt-8 px-10">
-                {/* <button className="bg-red-500 text-white px-6 py-2 font-semibold rounded-md">
-                  Contact With Us
-                </button> */}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Section */}
-          <div className="md:w-1/2 px-4 md:px-10" data-aos="fade-up">
-            <h1 className="text-xl font-bold mb-2">About Us</h1>
+        <div className="md:w-1/2 px-4 md:px-10" data-aos="fade-up">
+            {/* <h1 className="text-xl font-bold font-josefin mb-2">About Us</h1> */}
             <h2 className="text-5xl font-josefin font-bold mb-4">
               We Create{" "}
               <span className="font-josefin bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent">
@@ -139,10 +153,44 @@ export const About = () => {
               together.
             </p>
           </div>
+          <div className="flex flex-col md:w-1/2 gap-8" data-aos="fade-down">
+           
+           
+            <div>
+              <img src="about1.png" alt="Illustration" className="w-full" />
+            </div>
+            <div className="px- md:px-20 font-josefin">
+              {/* Points */}
+              {[
+                "We Create Premium Quality Content",
+                "We Focus on Client’s Needs and Satisfaction",
+                "We Deliver On Time",
+              ].map((text, index) => (
+                <h1
+                  key={index}
+                  className="flex items-center gap-2 text-base sm:text-md md:text-md font-josefin lg:text-md mb-2"
+                >
+                  <span>
+                    <TiTick className="=  border-[#42175B] bg-gradient-to-r from-[#DB7EEC] to-[#42175B]  h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white rounded-full" />
+                  </span>
+                  {text}
+                </h1>
+              ))}
+              <div className="mt-8 px-10">
+                {/* <button className="bg-red-500 text-white px-6 py-2 font-semibold rounded-md">
+                  Contact With Us
+                </button> */}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section */}
+        
+        
         </div>
 
         {/* Steps Section */}
-        <div className="mt-16 px-10 grid md:grid-cols-3 gap-8">
+        <div className="mt-16 lg:px-20 grid md:grid-cols-3 gap-8">
           {["Get Started", "Requirement", "Final Approval"].map(
             (title, index) => (
               <div
@@ -151,7 +199,7 @@ export const About = () => {
                 data-aos="zoom-in"
               >
                 <span className="absolute top-3 -left-3 border border-[#42175B] p-2 bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white">
-                  {index + 1}
+                  {index + 1} 
                 </span>
                 <h4 className="text-2xl font-josefin font-bold mb-2">{title}</h4>
                 <p className="text-gray-700 font-josefin  ">
@@ -166,11 +214,11 @@ export const About = () => {
           )}
         </div>
       </div>
-      <div className="p-8 bg-gray-100">
-        <div className="flex flex-wrap lg:flex-nowrap">
+      <div className="lg:px-24mb-10 bg-gray-100">
+        <div className="flex flex-wrap gap-14 lg:flex-nowrap">
           <form
             onSubmit={handleSubmit}
-            className="max-w-lg mx-auto bg-white shadow-2xl  p-6 rounded-3xl w-full lg:w-1/2 mb-6 lg:mb-0"
+            className=" bg-white shadow-2xl  p-6 rounded-3xl w-full lg:w-1/2 mb-6 lg:mb-0"
           >
             <div className="mb-4 font-josefin">
               <label htmlFor="name" className="block font-medium mb-1">

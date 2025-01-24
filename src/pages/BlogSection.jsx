@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Header } from "../components/Header";
+import { Link } from "react-router-dom";
 // import { Footer } from "../components/Footer";
 
 const BlogSection = () => {
@@ -93,10 +94,54 @@ const BlogSection = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-          <h1 className="text-4xl font-bold  font-josefin bg-gradient-to-r from-[#42175B] to-[#DB7EEC] bg-clip-text text-transparent mb-6 text-center">
+      <header className="relative h-[60vh] md:h-80 text-white">
+  {/* Video Background */}
+  <video
+    autoPlay
+    loop
+    muted
+    className="absolute inset-0 w-full h-full object-cover opacity-50"
+  >
+    <source
+      src="" // Provide the path to the video here
+      type="video/mp4"
+    />
+  </video>
+
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
+
+  {/* Content */}
+  <div className="relative z-10 text-center flex flex-col justify-center items-center h-full px-4">
+    <p className="text-xl md:text-2xl lg:text-4xl uppercase font-josefin text-black">
+      Who We Are
+    </p>
+    <h1 className="text-4xl md:text-6xl lg:text-9xl mt-4 md:mt-6 font-josefin text-black">
+      BLOGS
+    </h1>
+    <div className="flex justify-center items-center mt-6 md:mt-10 space-x-2">
+      <Link
+        to="/"
+        className="hover:underline font-josefin text-black hover:text-white cursor-pointer no-underline text-sm md:text-base"
+      >
+        Home
+      </Link>
+      <span className="text-black text-sm md:text-base">&gt;</span>
+      <Link
+        to="/blogs"
+        className="hover:underline font-josefin text-black hover:text-white cursor-pointer no-underline text-sm md:text-base"
+      >
+        Blogs
+      </Link>
+    </div>
+  </div>
+</header>
+
+        <div className="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+          
+          {/* <h1 className="text-4xl font-bold  font-josefin bg-gradient-to-r from-[#42175B] to-[#DB7EEC] bg-clip-text text-transparent mb-6 text-center">
             Blogs
-          </h1>
+          </h1> */}
           <h1 className="text-4xl text-black font-bold  font-josefin   mb-6 text-start">
             {blogContent.title}
           </h1>
