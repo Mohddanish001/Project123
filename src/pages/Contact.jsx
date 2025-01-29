@@ -8,6 +8,7 @@ export const Contact = () => {
     email: "",
     contact: "",
     requirement: "",
+    Type:"1",
   });
   const [success, setSuccess] = useState(null); 
   const [loading, setLoading] = useState(false);
