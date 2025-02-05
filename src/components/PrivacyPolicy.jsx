@@ -3,14 +3,54 @@ import { Link } from "react-router-dom";
 
 const PrivacyPolicy = () => {
   return (
+    <>
+     <header className="relative h-[60vh] mt-8 md:h-80 text-white">
+               {/* Video Background */}
+               <video
+                 autoPlay
+                 loop
+                 muted
+                 className="absolute inset-0 w-full h-full object-cover opacity-50"
+               >
+                 <source
+                   src="" // Provide the path to the video here
+                   type="video/mp4"
+                 />
+               </video>
+             
+               {/* Overlay */}
+               <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
+             
+               {/* Content */}
+               <div className="relative z-10 text-center flex flex-col justify-center items-center h-full px-4">
+                 <h1 className="text-4xl md:text-6xl lg:text-7xl mt-4 md:mt-6 font-josefin text-black">
+                   PRIVACY POLICY
+                 </h1>
+                 <div className="flex justify-center items-center mt-6 md:mt-10 space-x-2">
+                   <Link
+                     to="/"
+                     className="hover:underline font-josefin text-black hover:text-white cursor-pointer no-underline text-sm md:text-base"
+                   >
+                     Home
+                   </Link>
+                   <span className="text-black text-sm md:text-base">&gt;</span>
+                   <Link
+                     to="/privacy-policy"
+                     className="hover:underline font-josefin text-black hover:text-white cursor-pointer no-underline text-sm md:text-base"
+                   >
+                     Privacy Policy
+                   </Link>
+                 </div>
+               </div>
+             </header>
     <div className="min-h-screen py-10 px-4 sm:px-6 md:px-8 font-josefin">
-      <div className="max-w-7xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white shadow-md">
+      <div className="max-w-8xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white ">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
           <div className="flex-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+            {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
               Privacy Policy
-            </h1>
+            </h1> */}
             <p className="text-black text-justify text-base sm:text-lg">
               QuillWhale is the website's owner and operator. We respect your privacy and are committed to safeguarding your data. This privacy policy details what data we collect, how we use it, and the measures we take to ensure its confidentiality when you visit our website or provide us with information.
             </p>
@@ -61,7 +101,6 @@ const PrivacyPolicy = () => {
             <p className="text-gray-600 text-sm sm:text-base">
               Email: <a href="mailto:info@quillwhale.com" className="text-blue-600">info@quillwhale.com</a><br />
               Phone: +91 84485 74664<br />
-              Website: <a href="https://www.quillwhale.com/" className="text-blue-600">https://www.quillwhale.com/</a>
             </p>
           </div>
         </div>
@@ -84,6 +123,7 @@ const PrivacyPolicy = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

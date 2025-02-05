@@ -1,11 +1,11 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const BlogAndArticle = () => {
   return (
     <div className="min-h-screen py-10 px-4 sm:px-6 md:px-8 font-josefin">
-       <Helmet>
+       {/* <Helmet>
         <title>Best Blog Writing Services in India 
         </title>
         <meta
@@ -13,8 +13,8 @@ const BlogAndArticle = () => {
           content="Discover the best blog writing services in India! Get high-quality, SEO-optimized blogs to boost engagement, traffic, and brand authority "
         />
         <meta name="keywords" content="react, meta tags, helmet async" />
-      </Helmet>
-      <div className="max-w-7xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white shadow-md">
+      </Helmet> */}
+      <div className="max-w-7xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white ">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
           <div className="flex-1">

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ProductDescription = () => {
   return (
     <div className="min-h-screen py-10 px-4 sm:px-6 md:px-8">
-      <div className="max-w-7xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white shadow-md">
+      <div className="max-w-7xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white ">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
           <div className="flex-1">

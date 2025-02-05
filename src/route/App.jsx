@@ -3,6 +3,7 @@ import { Outlet, useLocation, BrowserRouter as Router, Route, Routes } from "rea
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import SocialMediaContent from "../pages/SocialMediaContent";
+import TOp from "../components/TOp";
 
 export const App = () => {
   const location = useLocation();
@@ -15,8 +16,10 @@ export const App = () => {
     <>
       <Header />
       <main className="min-h-[78vh]">
+      <TOp />
         <Outlet />
       </main>
+     
       <Footer />
     </>
   );

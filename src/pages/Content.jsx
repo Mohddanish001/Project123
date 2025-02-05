@@ -23,6 +23,7 @@ import GoogleReviews from "../components/GoogleReviews";
 import HappyClientsCounter from "../components/HappyClientsCounter";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import TOp from "../components/TOp";
 
 export default function Content() {
   const [leftRef, leftInView] = useInView({ threshold: 0.2 });
@@ -60,6 +61,7 @@ export default function Content() {
 
   return (
     <>
+  
       {/* <TextSlider /> */}
       <section className="bg-white ">
         {/* Left Image Section */}
@@ -351,31 +353,32 @@ const ContactInfo = () => {
     <>
       <GoogleReviews />
 
-      <div className="text-center flex flex-col items-center justify-center bg-white overflow-hidden">
-        <h3 className="text-black text-2xl sm:text-3xl pt-10 font-josefin py-4">
-          Our Clients
-        </h3>
+      <div className="text-center flex flex-col items-center justify-center bg-white overflow-hidden w-full">
+  <h3 className="text-black text-2xl sm:text-3xl pt-10 font-josefin py-4">
+    Our Clients
+  </h3>
 
-        <div className="w-full overflow-x-hidden ">
-          <Slider
-            {...sliderSettings}
-            className="w-full max-w-screen-xl mx-auto px-4 py-5 sm:px-6 md:px-10 lg:px-20 xl:px-32"
-          >
-            {logos.map((logo, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center p-2 transition-transform duration-300 transform hover:scale-105"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-8 sm:h-8 md:h-6 lg:h-8 xl:h-6 object-contain"
-                />
-              </div>
-            ))}
-          </Slider>
+  <div className="w-full flex justify-center">
+    <Slider
+      {...sliderSettings}
+      className="w-full max-w-screen-md sm:max-w-screen-lg md:max-w-screen-xl mx-auto px-4 py-5"
+    >
+      {logos.map((logo, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-center p-2 transition-transform duration-300 transform hover:scale-105"
+        >
+          <img
+            src={logo.src}
+            alt={logo.alt}
+            className="h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 object-contain mx-auto"
+          />
         </div>
-      </div>
+      ))}
+    </Slider>
+  </div>
+</div>
+
     </>
   );
 };

@@ -18,6 +18,10 @@ import GhostWriting from "../pages/GhostWriting";
 import ContentEditing from "../pages/ContentEditing";
 import Script from "../pages/Script";
 import PrivacyPolicy from "../components/PrivacyPolicy";
+import MainBlogs from "../pages/Blogs/MainBlogs";
+import Blog1 from "../pages/Blogs/Blog1";
+import Blog2 from "../pages/Blogs/Blog2";
+import Blog3 from "../pages/Blogs/Blog3";
 
 const router = createBrowserRouter([
   {
@@ -37,23 +41,35 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/blogs",
-        element: <BlogSection />,
+        path: "Social-Media-Content-Ideas",
+        element: <Blog1 />,
       },
       {
-        path: "/content-creations",
+        path: "/How-to-Develop-a-Content-Strategy-That-Aligns-With-Your-Brand-Goals",
+        element: <Blog2 />,
+      },
+      {
+        path: "/5-Elements-Every-Great-Marketing-Video-Script-Needs",
+        element: <Blog3 />,
+      },
+      {
+        path: "/blogs",
+        element: <MainBlogs />,
+      },
+      {
+        path: "content-creations",
         element: <ContentCreation />,
       },
       {
-        path: "/social-media-content-writing",
+        path: "social-media-content-writing",
         element: <SocialMediaContent />,
       },
       {
-        path: "/seo-friendly-content-writing",
+        path: "seo-friendly-content-writing",
         element: <SEOContentCreation />,
       },
       {
-        path: "/best-blog-writing-services",
+        path: "blog-&-articles-writing",
         element: <BlogAndArticle />,
       },
       {
@@ -69,7 +85,7 @@ const router = createBrowserRouter([
         element: <ProductDescription/>,
       },
       {
-        path: "/email-marketing-content-marketing",
+        path: "email-marketing-content-marketing",
         element: <EmailMarketing/>,
       },
       {

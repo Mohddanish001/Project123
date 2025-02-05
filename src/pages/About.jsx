@@ -3,49 +3,96 @@ import { TiTick } from "react-icons/ti";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import axios from "axios";
-import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+// import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+// import React, { useState } from "react";
+// import axios from "axios";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+import Select from "react-select";
+import countries from "i18n-iso-countries";
+import en from "i18n-iso-countries/langs/en.json";
+
+
+
+countries.registerLocale(en);
+
+// Country Options
+const countryOptions = [
+  { code: "IN", label: "🇮🇳 India", value: "+91", maxLength: 10 },
+  { code: "US", label: "🇺🇸 USA", value: "+1", maxLength: 10 },
+  { code: "GB", label: "🇬🇧 UK", value: "+44", maxLength: 10 },
+  { code: "AU", label: "🇦🇺 Australia", value: "+61", maxLength: 9 },
+];
+
 
 export const About = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    contact: "",
-    requirement: "",
-  });
+ const [formData, setFormData] = useState({
+     name: "",
+     email: "",
+     contact: "",
+     requirement: "",
+     type: "1",
+     countryCode: "+91",
+   });
+  const [selectedCountry, setSelectedCountry] = useState(countryOptions[0]); // Default: India
+  const [success, setSuccess] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  // Handle Input Change
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: value,
-    }));
+    if (id === "name" && !/^[a-zA-Z ]*$/.test(value)) return;
+//      if (id === "email" && !/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(value)) {
+//   return;
+// }
+    setFormData((prevData) => ({ ...prevData, [id]: value }));
   };
 
 
+ 
+  // Handle Phone Number Change
+  const handlePhoneChange = (value) => {
+    if (!value || value.length <= selectedCountry.maxLength + selectedCountry.value.length) {
+      setFormData((prevData) => ({ ...prevData, contact: value }));
+    }
+  };
+
+  // Handle Country Change
+  const handleCountryChange = (selected) => {
+    setSelectedCountry(selected);
+    setFormData((prevData) => ({
+      ...prevData,
+      countryCode: selected.value,
+      contact: "",
+    }));
+  };
+
+  // Handle Form Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
-      const response = await axios.post(
-        "https://apiig.fourbrick.in/contact",
-        formData, // Data to be sent in JSON format
-        {
-          headers: {
-            "Content-Type": "application/json", // Explicitly set the content type
-          },
-        }
-      );
-      console.log("Response:", response.data);
+      const response = await axios.post("https://apiwt.fourbrick.in/contact", formData, {
+        headers: { "Content-Type": "application/json" },
+      });
 
-      // Reset the form fields
       setFormData({
         name: "",
         email: "",
         contact: "",
         requirement: "",
+        type: "1",
+        countryCode: "+91",
       });
+
+      setSuccess(response.status >= 200 && response.status < 300);
     } catch (error) {
-      console.error("Error submitting form:", error);
+      setSuccess(false);
+    } finally {
+      setLoading(false);
     }
   };
   useEffect(() => {
@@ -214,75 +261,41 @@ export const About = () => {
           )}
         </div>
       </div>
-      <div className="lg:px-24mb-10 bg-gray-100">
+      <div className="lg:px-24 mb-10 bg-gray-100">
         <div className="flex flex-wrap gap-14 lg:flex-nowrap">
-          <form
-            onSubmit={handleSubmit}
-            className=" bg-white shadow-2xl  p-6 rounded-3xl w-full lg:w-1/2 mb-6 lg:mb-0"
-          >
-            <div className="mb-4 font-josefin">
-              <label htmlFor="name" className="block font-medium mb-1">
-                Your name *
-              </label>
-              <input
-                type="text"
-                id="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Enter your name here"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
+        <form onSubmit={handleSubmit} className="w-full lg:w-2/5 bg-white shadow-2xl p-8 rounded-3xl">
+            <div className="mb-4">
+              <label className="block font-medium mb-1">Your Name *</label>
+              <input type="text" id="name" value={formData.name} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" required />
             </div>
-            <div className="mb-4 font-josefin">
-              <label htmlFor="email" className="block font-medium mb-1">
-                Email *
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Enter your email here"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
+            <div className="mb-4">
+              <label className="block font-medium mb-1">Email *</label>
+              <input type="email" id="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" required />
             </div>
-            <div className="mb-4 font-josefin">
-              <label htmlFor="contact" className="block font-medium mb-1">
-                Contact Number *
-              </label>
-              <input
-                type="text"
-                id="contact"
-                value={formData.contact}
-                onChange={handleChange}
-                placeholder="Enter your number"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
+            <div className="mb-4">
+              <label className="block font-medium mb-1">Contact Number *</label>
+              <div className="flex items-center">
+                <PhoneInput
+                  international
+                  defaultCountry={selectedCountry.code.toLowerCase()}
+                  value={formData.contact}
+                  onChange={handlePhoneChange}
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
             </div>
-            <div className="mb-4 font-josefin">
-              <label htmlFor="requirement" className="block font-medium mb-1">
-                Your requirement *
-              </label>
-              <textarea
-                id="requirement"
-                value={formData.requirement}
-                onChange={handleChange}
-                placeholder="Brief us your requirement"
-                className="w-full px-4 py-2 font-josefin border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                rows="4"
-                required
-              ></textarea>
+            <div className="mb-4">
+              <label className="block font-medium mb-1">Your Requirement *</label>
+              <textarea id="requirement" value={formData.requirement} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" rows="4" required></textarea>
             </div>
-            <button
-              type="submit"
-              className="w-full sm:w-20 font-josefin bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC]
-                   transition-all duration-300 "
-            >
-              Submit
+
+            <button type="submit" className="w-40 bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white py-2 rounded-full transition-all duration-300" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
             </button>
+
+            {success === true && <p className="text-green-600 mt-4">Thank you! We will contact you soon.</p>}
+            {success === false && <p className="text-red-600 mt-4">Failed to send message. Please try again.</p>}
           </form>
           <div className="w-full lg:w-1/2 flex flex-col justify-between  lg:mt-0">
             <div></div>

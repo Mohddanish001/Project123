@@ -166,7 +166,7 @@ const GoogleReviews = () => {
 
   // Set up auto-slide effect
   useEffect(() => {
-    const interval = setInterval(nextReview, 1000); // 5000 ms = 5 seconds
+    const interval = setInterval(nextReview, 3000); // 5000 ms = 5 seconds
 
     // Clean up the interval when the component unmounts
     return () => clearInterval(interval);
@@ -229,7 +229,7 @@ const GoogleReviews = () => {
             <div className="text-lg  font-bold font-josefin">
               {reviews[currentReviewIndex].name}
             </div>
-            <p className="text-lg mb-4 font-josefin italic">
+            <p className="text-lg  mb-4 font-josefin italic">
               "{reviews[currentReviewIndex].review}"
             </p>
 

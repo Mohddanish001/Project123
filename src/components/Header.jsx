@@ -1,20 +1,33 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const menuRef = useRef(null); // Ref for mobile menu
   const servicesRef = useRef(null); // Ref for dropdown container
+  const [activeLink, setActiveLink] = useState("/");
+  const location = useLocation();
+
+ 
+
 
   const contentWritingServices = [
-    { name: "SEO-friendly Content Writing", icon: "📈" },	
-    { name: "Blog & Articles Writing", icon: "✍️", url: "best-blog-writing-services	" },
+    { name: "SEO-friendly Content Writing", icon: "📈" },
+    { name: "Blog & Articles Writing", icon: "✍️" },
     { name: "Website Content Writing", icon: "🌐" },
     { name: "Copywriting for Ads", icon: "📢" },
     { name: "Product Descriptions", icon: "🛒" },
-    { name: "Social Media Content", icon: "📱", url: "social-media-content-writing"  },
-    { name: "Email Marketing Copy", icon: "📧" , url: "email-marketing-content-marketing" },	
+    {
+      name: "Social Media Content",
+      icon: "📱",
+      url: "social-media-content-writing",
+    },
+    {
+      name: "Email Marketing Copy",
+      icon: "📧",
+      url: "email-marketing-content-marketing",
+    },
     { name: "Press Releases", icon: "📰" },
     { name: "Ghostwriting", icon: "👻" },
     { name: "Content Editing & Error-free", icon: "✅" },
@@ -54,15 +67,26 @@ export const Header = () => {
     };
   }, []);
 
-  const handleLinkClick = () => {
-    setIsMenuOpen(false);  // Close mobile menu
-    setIsServicesOpen(false);  // Close services dropdown
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setActiveLink(location.pathname);
+  }, [location.pathname]);
+
+  const handleLinkClick = (path) => {
+    if (location.pathname === path) {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top if clicking the same page link
+    }
+    setIsMenuOpen(false); // Close mobile menu
+    setIsServicesOpen(false); // Close services dropdown
+    setActiveLink(path);
+
   };
 
   return (
     <nav className="bg-white font-josefin w-full fixed top-0 z-50 shadow-md transition-all">
       <div className="px-4 md:px-20">
-        <div className="flex justify-between items-center py-2">
+        <div className="flex justify-between items-center ">
           {/* Logo */}
           <div>
             <Link to="/">
@@ -72,86 +96,86 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8 items-center">
-            <Link
-              to="/"
-              className="text-black font-josefin text-xl hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
-              onClick={handleLinkClick}  // Close menu and dropdown when clicked
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="text-black font-josefin text-xl hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
-              onClick={handleLinkClick}  // Close menu and dropdown when clicked
-            >
-              About Us
-            </Link>
-            <div className="relative group" ref={servicesRef}>
-              <button
-                onClick={() => setIsServicesOpen((prev) => !prev)}
-                className="flex items-center font-josefin text-black text-xl hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
-              >
-                Services
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="ml-1 h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {isServicesOpen && (
-  <div className="absolute top-full bg-white border shadow-lg rounded-lg w-72">
-    <ul className="py-4">
-      {contentWritingServices.map((service, index) => (
-        <li key={index} className="px-4 py-2 hover:bg-gray-100">
-          <Link
-            to={`/${service.url || service.name.toLowerCase().replace(/ /g, "-")}`}
-            className="flex items-center font-josefin text-black"
-            onClick={handleLinkClick}
+      <Link
+        to="/"
+        className={`text-black font-josefin text-lg ${
+          activeLink === "/" ? "bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent" : ""
+        } hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent`}
+        onClick={() => handleLinkClick("/")}
+      >
+        Home
+      </Link>
+      <Link
+        to="/about"
+        className={`text-black font-josefin text-lg ${
+          activeLink === "/about" ? "bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent" : ""
+        } hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent`}
+        onClick={() => handleLinkClick("/about")}
+      >
+        About Us
+      </Link>
+      <div className="relative group flex items-center " ref={servicesRef}>
+        <button
+          onClick={() => setIsServicesOpen((prev) => !prev)}
+          className="flex items-center font-josefin text-black text-lg hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
+        >
+          Services 
+       
+        </button>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="ml-1 h-5 w-5 hover:text-black"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            <span className="mr-2">{service.icon}</span>
-            {service.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
-
-            </div>
-            <Link
-              to="/blogs"
-              className="text-black font-josefin text-xl hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
-              onClick={handleLinkClick}  // Close menu and dropdown when clicked
-            >
-              Blog
-            </Link>
-            <li className="list-none">
-              <a
-                href="/contact"
-                className="block list-none bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleLinkClick}  // Close menu and dropdown when clicked
-              >
-                Free Consulting
-              </a>
-            </li>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        {isServicesOpen && (
+          <div className="absolute top-full bg-white border shadow-lg rounded-lg w-72">
+            <ul className="py-4">
+              {contentWritingServices.map((service, index) => (
+                <li key={index} className="px-4 py-2 hover:bg-gray-100">
+                  <Link
+                    to={`/${service.url || service.name.toLowerCase().replace(/ /g, "-")}`}
+                    className="flex items-center font-josefin text-black"
+                    onClick={() => handleLinkClick(`/${service.url || service.name.toLowerCase().replace(/ /g, "-")}`)}
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
+        )}
+      </div>
+      <Link
+        to="/blogs"
+        className={`text-black font-josefin text-lg ${
+          activeLink === "/blogs" ? "bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent" : ""
+        } hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent`}
+        onClick={() => handleLinkClick("/blogs")}
+      >
+        Blog
+      </Link>
+      <li className="list-none">
+        <a
+          href="/contact"
+          className="block list-none bg-gradient-to-r from-[#DB7EEC] to-[#42175B] text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => handleLinkClick("/contact")}
+        >
+          Free Consulting
+        </a>
+      </li>
+    </div>
 
           {/* Mobile Hamburger Menu */}
           <button
             onClick={() => {
               setIsMenuOpen(!isMenuOpen);
-              setIsServicesOpen(false); // Close services dropdown when hamburger is clicked
+              setIsServicesOpen(false); 
             }}
             className="md:hidden text-gray-700 focus:outline-none"
           >
@@ -166,7 +190,11 @@ export const Header = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                d={
+                  isMenuOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
               />
             </svg>
           </button>
@@ -174,91 +202,93 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-2" ref={menuRef}>
-            <ul className="space-y-4 text-center">
-              <li>
-                <Link
-                  to="/"
-                  className="block font-josefin text-black hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
-                  onClick={handleLinkClick}  // Close menu and dropdown when clicked
+        <div className="md:hidden py-4 mt-2" ref={menuRef}>
+          <ul className="space-y-4 text-left">
+            <li>
+              <Link
+                to="/"
+                className={`block font-josefin text-black ${
+                  activeLink === "/" ? "bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent" : ""
+                } hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent`}
+                onClick={() => handleLinkClick("/")}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className={`block font-josefin text-black ${
+                  activeLink === "/about" ? "bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent" : ""
+                } hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent`}
+                onClick={() => handleLinkClick("/about")}
+              >
+                About Us
+              </Link>
+            </li>
+            <li className="relative ">
+              <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="flex items-start font-josefin justify-start w-full text-black hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
+              >
+                Services
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="ml-1 h-5 w-5 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="block font-josefin text-black hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
-                  onClick={handleLinkClick}  // Close menu and dropdown when clicked
-                >
-                  About Us
-                </Link>
-              </li>
-              <li className="relative">
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center font-josefin justify-center w-full text-black hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent"
-                >
-                  Services
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="ml-1 h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-                {isServicesOpen && (
-                  <div className="bg-white border shadow-lg rounded-lg mt-2">
-                    <ul className="py-4 px-2">
-                      {contentWritingServices.map((service, index) => (
-                        <li key={index} className="py-2 hover:bg-gray-100">
-                          <Link
-                            to={`/${service.name
-                              .toLowerCase()
-                              .replace(/ /g, "-")}`}
-                            className="flex font-josefin items-center text-black"
-                            onClick={handleLinkClick}  // Close menu and dropdown when clicked
-                          >
-                            <span className="mr-2">{service.icon}</span>
-                            {service.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </li>
-              <li>
-                <Link
-                  to="/blogs"
-                  className="block font-josefin text-black hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
-                  onClick={handleLinkClick}  // Close menu and dropdown when clicked
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="/contact"
-                  className="block bg-gradient-to-r  lg:w-auto from-[#DB7EEC] to-[#42175B] text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleLinkClick}  
-                >
-                  Free Consulting
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isServicesOpen && (
+                <div className="bg-white border shadow-lg rounded-lg mt-2">
+                  <ul className="py-4 px-2">
+                    {contentWritingServices.map((service, index) => (
+                      <li key={index} className="py-2 text-sm hover:bg-gray-100">
+                        <Link
+                          to={`/${service.name.toLowerCase().replace(/ /g, "-")}`}
+                          className={`flex font-josefin items-start text-black ${
+                            activeLink === `/${service.name.toLowerCase().replace(/ /g, "-")}`
+                              ? "bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent"
+                              : ""
+                          } hover:bg-gradient-to-r hover:from-[#DB7EEC] hover:to-[#42175B] hover:bg-clip-text hover:text-transparent`}
+                          onClick={() => handleLinkClick(`/${service.name.toLowerCase().replace(/ /g, "-")}`)}
+                        >
+                          {service.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </li>
+            <li>
+              <Link
+                to="/blogs"
+                className={`block font-josefin text-black ${
+                  activeLink === "/blogs" ? "bg-gradient-to-r from-[#DB7EEC] to-[#42175B] bg-clip-text text-transparent" : ""
+                } hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300`}
+                onClick={() => handleLinkClick("/blogs")}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                className="block bg-gradient-to-r lg:w-auto from-[#DB7EEC] to-[#42175B] text-white px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#42175B] hover:to-[#DB7EEC] transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleLinkClick("/contact")}
+              >
+                Free Consulting
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
       </div>
     </nav>
   );

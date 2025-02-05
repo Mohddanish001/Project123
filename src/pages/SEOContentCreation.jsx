@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 
 const SEOContentCreation = () => {
   return (
     <>
     <div className="min-h-screen py-10 px-4 sm:px-6 md:px-8">
-    <Helmet>
+    {/* <Helmet>
         <title>SEO Friendly Content Writing Services</title>
         <meta
           name="description"
           content="Get SEO-Friendly Content Writing Services to enhance your rankings. Drive traffic with engaging, optimized content tailored to your audience. "
         />
         <meta name="keywords" content="react, meta tags, helmet async" />
-      </Helmet>
-      <div className="max-w-7xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white shadow-md">
+      </Helmet> */}
+      <div className="max-w-7xl mx-auto rounded-md px-6 sm:px-8 md:px-12 lg:px-24 py-10 bg-white ">
         {/* Hero Section */}
         <div className="flex flex-col lg:mt-20 md:flex-row items-center gap-8 mb-10">
           <div className="flex-1">
