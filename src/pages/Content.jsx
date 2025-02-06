@@ -366,18 +366,19 @@ const ContactInfo = () => {
       {logos.map((logo, index) => (
         <div
           key={index}
-          className="flex items-center justify-center p-2 transition-transform duration-300 transform hover:scale-105"
+          className="flex items-center justify-center px-4" // Add equal padding for spacing
         >
           <img
             src={logo.src}
             alt={logo.alt}
-            className="h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 object-contain mx-auto"
+            className="h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 object-contain"
           />
         </div>
       ))}
     </Slider>
   </div>
 </div>
+
 
     </>
   );
