@@ -12,7 +12,7 @@ export const Header = () => {
   const contentWritingServices = [
     { name: "SEO-friendly Content Writing", icon: "📈" },
     { name: "Blog & Articles Writing", icon: "✍️" },
-    { name: "Website Content Writing", icon: "🌐" },
+    { name: "Website Content Writing", icon: "🌐" }, 
     { name: "Copywriting for Ads", icon: "📢" },
     { name: "Product Descriptions", icon: "🛒" },
     { name: "Social Media Content", icon: "📱", url: "social-media-content-writing" },
@@ -274,7 +274,7 @@ export const Header = () => {
                 onClick={() => handleLinkClick("/blogs")}
               >
                 Blog
-              </Link>
+              </Link> 
             </li>
             <li>
               <a

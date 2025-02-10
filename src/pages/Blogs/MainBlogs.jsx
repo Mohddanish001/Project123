@@ -32,20 +32,34 @@ function MainBlogs() {
                 image: "image19.png",
                 route: "/5-Elements-Every-Great-Marketing-Video-Script-Needs",
             },
-            // {
-            //     id: "section4",
-            //     title: "How to Create a Multilingual Website for Global Reach.",
-            //     content: "Growing audience is one of the major reasons for which your website has to reach audiences all around the world...",
-            //     image: "image 11.png",
-            //     route: "/blog4",
-            // },
-            // {
-            //     id: "section5",
-            //     title: "App Maintenance: Why It’s as Important as Development",
-            //     content: "Making a mobile app is the preliminary step of quite a long process. Most of the time,...",
-            //     image: "image 11.png",
-            //     route: "/blog5",
-            // },
+            {
+                id: "section4",
+                title: " Mastering Content Planning: Your Path to Digital Success",
+                content: "Content planning seems boring in any project or event, but in reality, it's the energy that makes your post go viral, your tweet trending, and your blog successful.",
+                image: "image 11.png",
+                route: "/Mastering-Content Planning-Your-Path-to-Digital-Success",
+            },
+            {
+                id: "section5",
+                title: "The Rise of User-Generated Content: Tips for Leveraging It",
+                content: " Certainly, in the online world, the present trend of user-generated content, which is by any measure a bonanza for masticating marketers, has made its way into almost all channels.",
+                image: "image 11.png",
+                route: "/The-Rise-of-User-Generated-Content-Tips-for-Leveraging-It",
+            },
+            {
+              id: "section6",
+              title: "How to Convert Data into Intriguing Visual Narratives ",
+              content: "In today's globally digitized data environment, the raw numbers are not the only ones that can attract attention or tell an engaging story.",
+              image: "image 11.png",
+              route: "/How-to-Convert-Data-into-Intriguing-Visual-Narratives",
+          },
+          {
+            id: "section7",
+            title: "The Psychology of Fonts: How Typography Influences Reader Behavior",
+            content: "Content that wields the most influence is created, emphasizing the main words. But what about the article that the written content summarizes all the time?",
+            image: "image 11.png",
+            route: "/The-Psychology-of-Fonts-How-Typography-Influences-Reader-Behavior",
+        },
         ],
     };
 

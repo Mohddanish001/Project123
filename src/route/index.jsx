@@ -22,6 +22,10 @@ import MainBlogs from "../pages/Blogs/MainBlogs";
 import Blog1 from "../pages/Blogs/Blog1";
 import Blog2 from "../pages/Blogs/Blog2";
 import Blog3 from "../pages/Blogs/Blog3";
+import Blog4 from "../pages/Blogs/Blog4";
+import Blog5 from "../pages/Blogs/Blog5";
+import Blog6 from "../pages/Blogs/Blog6";
+import Blog7 from "../pages/Blogs/Blog7";
 
 const router = createBrowserRouter([
   {
@@ -100,6 +104,23 @@ const router = createBrowserRouter([
         path: "content-editing-&-error-free",
         element: <ContentEditing/>,
       },
+      {
+        path: "The-Rise-of-User-Generated-Content-Tips-for-Leveraging-It",
+        element: <Blog5/>,
+      },
+      {
+        path: "How-to-Convert-Data-into-Intriguing-Visual-Narratives",
+        element: <Blog6/>,
+      },
+      {
+        path: "The-Psychology-of-Fonts-How-Typography-Influences-Reader-Behavior",
+        element: <Blog7/>,
+      },
+      {
+        path: "Mastering-Content Planning-Your-Path-to-Digital-Success",
+        element: <Blog4/>,
+      },
+      
       {
         path: "script-&-content-marketing",
         element: <Script/>,
