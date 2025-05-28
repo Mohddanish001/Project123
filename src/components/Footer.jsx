@@ -38,12 +38,12 @@ export const Footer = () => {
         {/* Contact Info */}
         <div className="mb-4 flex items-center gap-2 text-gray-400">
           <FaPhoneAlt />
-          <span className="font-josefin">+91 84485 74664</span>
+          <span className="font-josefin">+91 123456789</span>
         </div>
 
         <div className="flex items-center gap-2 text-gray-400">
           <FaEnvelope />
-          <span className="font-josefin">info@quillwhale.com</span>
+          <span className="font-josefin">test@quillwhale.com</span>
         </div>
       </div>
 
@@ -213,15 +213,17 @@ export const Footer = () => {
           {/* <a href="#" className="hover:text-gray-400">
             <FaFacebookF className="text-blue-600 hover:text-gray-400" />
           </a> */}
+          {/* company/writeoutq/ */}
+          {/* /quillwhale/ */}
           <a 
-           href="https://www.linkedin.com/company/writeoutq/"
+           href="https://www.linkedin.com/"
            target="_blank"
            rel="noopener noreferrer"
            className="hover:text-gray-400">
             <FaLinkedinIn className="text-blue-700 " />
           </a>
           <a 
-            href="https://www.instagram.com/quillwhale/"
+            href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
            className="hover:text-gray-400">

@@ -299,15 +299,16 @@ export const About = () => {
           </form>
           <div className="w-full lg:w-1/2 flex flex-col justify-between  lg:mt-0">
             <div></div>
+            {/* C-65, 1st Floor
+                Sector - 02, Noida Uttar Pradesh - 201301 India */}
             <div className="text-start">
               <p className="mb-2 font-josefin">
-                <span className="font-bold">Address:</span> C-65, 1st Floor
-                Sector - 02, Noida Uttar Pradesh - 201301 India
+                <span className="font-bold">Address:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corrupti.
               </p>
               <p className="text-black mb-2 font-josefin flex items-center gap-2">
                 {/* Phone Icon */}
                 <FaPhoneAlt />
-                +91 84485 74664
+                +91 123456789
               </p>
               <p className="text-black font-josefin  flex items-center gap-2">
                 {/* Email Icon */}
@@ -316,7 +317,7 @@ export const About = () => {
                   href="mailto:info@quillwhale.com"
                   className="text-black hover:text-gray-300 font-josefin"
                 >
-                  info@quillwhale.com
+                  test@quillwhale.com
                 </a>
               </p>
               {/* <p>
@@ -332,7 +333,8 @@ export const About = () => {
             <div className="mt-4">
               <iframe
                 title="Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.668574207347!2d77.31452569999999!3d28.5840224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5690a6731fd%3A0x432b6ff72b9ab2f4!2sFourbrick%20Technology%20OPC%20Pvt.%20Ltd.!5e1!3m2!1sen!2sin!4v1737546047282!5m2!1sen!2sin"
+               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d142557.42016481556!2d77.94652302924904!3d29.09409224754969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1748403175698!5m2!1sen!2sin"
+                // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.668574207347!2d77.31452569999999!3d28.5840224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5690a6731fd%3A0x432b6ff72b9ab2f4!2sFourbrick%20Technology%20OPC%20Pvt.%20Ltd.!5e1!3m2!1sen!2sin!4v1737546047282!5m2!1sen!2sin"
                 className="w-full h-64 border-0"
                 allowFullScreen=""
                 loading="lazy"
